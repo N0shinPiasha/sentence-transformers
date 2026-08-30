@@ -1,0 +1,2 @@
+Similarity (Sentence 1 vs 2): 0.7758
+Similarity (Sentence 1 vs 3): 0.0682
