@@ -55,3 +55,4 @@ While the Spearman correlation supports the overall validity of the model, inves
 
 This report presents empirical results reproducing the core findings of the **Sentence-BERT (SBERT)** paper in a resource-constrained cloud environment. The implementation validates the Siamese network architecture and Mean-pooling aggregation strategies for deriving fixed-size sentence embeddings. 
 
+![Terminal Output](comparison_output.png) 
