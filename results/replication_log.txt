@@ -1,0 +1,36 @@
+======================================================================
+ENVIRONMENT
+  Python                : 3.14.2
+  Platform              : Linux-6.8.0-1064-azure-x86_64-with-glibc2.39
+  torch                 : 2.14.1+cu130
+  transformers          : 5.18.0
+  sentence-transformers : 6.1.0.dev0
+  device                : cpu
+======================================================================
+STS-B test pairs: 1379 (full test split, no subsampling)
+
+Avg. GloVe embeddings*      60.81   (paper: 58.02)
+
+Avg. BERT embeddings        47.29   (paper: 46.35)
+
+BERT CLS-vector             20.31   (paper: 20.16)
+
+  Library evaluator cross-check: {'sts-test_spearman_cosine': 0.7698488686072358}
+  Largest disagreements (gold 0-5 | model cosine):
+    0.00 | 0.94 | You don't need any visa.  ||  You don't need sauce at all.
+    0.00 | 0.91 | You don't have to worry.  ||  You don't have to do anything to season it.
+    0.00 | 0.90 | There is no test that can tell you if it is sealed or not.  ||  There is no code telling you that you cannot do this.
+    0.00 | 0.88 | There is no maximum.  ||  There is no quarantine period.
+    0.00 | 0.87 | You shouldn't feel any obligation at all.  ||  You don't need sauce at all.
+SBERT-NLI-base              76.99   (paper: 77.03)
+
+SBERT-NLI-large             79.20   (paper: 79.23)
+
+======================================================================
+Model                         Ours   Paper    Diff    Time
+Avg. GloVe embeddings*       60.81   58.02   +2.79     10s
+Avg. BERT embeddings         47.29   46.35   +0.94    470s
+BERT CLS-vector              20.31   20.16   +0.15    229s
+SBERT-NLI-base               76.99   77.03   -0.04    131s
+SBERT-NLI-large              79.20   79.23   -0.03    765s
+* Paper used GloVe 840B.300d; this uses 6B.300d, so expect a gap.

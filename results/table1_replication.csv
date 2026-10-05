@@ -1,0 +1,6 @@
+model,ours,paper,diff,time
+Avg. GloVe embeddings*,60.81,58.02,+2.79,10s
+Avg. BERT embeddings,47.29,46.35,+0.94,470s
+BERT CLS-vector,20.31,20.16,+0.15,229s
+SBERT-NLI-base,76.99,77.03,-0.04,131s
+SBERT-NLI-large,79.20,79.23,-0.03,765s
