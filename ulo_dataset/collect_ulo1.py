@@ -1,18 +1,4 @@
-"""
-Step 1 of the ULO dataset: COLLECT.
 
-Scrapes Unit Learning Outcomes (ULOs) from Macquarie University's public
-2026 unit guides (https://unitguides.mq.edu.au) and saves them to ulos.csv.
-
-How it works
-  1. Opens a few department pages that list every unit guide.
-  2. Takes the first N different units from each department.
-  3. Opens each unit guide and pulls out lines like "ULO1: ...".
-  4. Saves one row per outcome, with the source link and date as proof.
-
-Run:   pip install requests beautifulsoup4 pandas
-       python collect_ulos.py
-"""
 
 import re
 import time
