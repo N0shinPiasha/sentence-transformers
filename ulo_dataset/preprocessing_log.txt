@@ -1,0 +1,9 @@
+Raw outcomes collected            : 211
+Removed too short (<4 words)      : 1
+Removed duplicates (same wording) : 5
+Clean outcomes kept               : 205
+Pairs made (same_unit       ) : 50
+Pairs made (same_discipline ) : 50
+Pairs made (cross_discipline) : 50
+TOTAL pairs                       : 150
+Pairs for you to rate by hand     : 20
