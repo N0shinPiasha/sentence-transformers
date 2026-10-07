@@ -1,0 +1,6 @@
+dataset,domain,pairs,metric,score,status
+BIOSSES,Biomedical,100,Spearman,51.62,ok
+Quora Question Pairs,Everyday questions,2000,ROC-AUC,80.57,ok
+Financial PhraseBank,Finance,2000,ROC-AUC,66.11,ok
+CUAD,Legal contracts,2000,ROC-AUC,75.23,ok
+Amazon ESCI,E-commerce search,2000,Spearman,29.37,ok
