@@ -1,0 +1,118 @@
+You are an expert in university curriculum design. You will rate how similar in MEANING two university Unit Learning Outcomes (ULOs) are.
+
+Use this scale (0-5). Judge what the student must be able to do, not shared words.
+5 = Equivalent: same skill, same subject, same level. Could replace each other.
+4 = Mostly equivalent: same skill and subject; small differences in scope or detail.
+3 = Roughly similar: same general skill OR same specific topic, but clear differences.
+2 = Partly related: share one aspect (e.g. both about data analysis, or both about communication) but different overall goals.
+1 = Loosely related: different topics; only a very general connection.
+0 = Unrelated: nothing meaningful in common.
+
+Rules:
+- Rate every pair independently.
+- Output ONLY CSV, no other text, with this exact header:
+pair_id,llm_score,llm_reason
+- llm_score must be a whole number 0-5.
+- llm_reason must be under 20 words and must not contain commas.
+
+PAIRS:
+[101] A: Identify and explain the role of technology and data in enhancing marketing strategies.
+      B: Analyse and interpret marketing practices to generate actionable insights through the use of marketing technology tools.
+[102] A: Explain the key Big Data concepts and techniques.
+      B: Critically discuss astronomical topics in small teams to come up with effective solutions to problems.
+[103] A: Analyse data using computing packages which implement the most common Inference procedures.
+      B: Communicate mathematical concepts, pertaining to foundation level science topics, in a variety of forms including graphically, numerically, in writing and by using equations.
+[104] A: Describe the business environment of the accounting profession.
+      B: Identify the features of the Australian legal system including the law of contract and distinguish business organisations based on their legal characteristics.
+[105] A: Evaluate and use elementary Bayesian inference methods.
+      B: design and write python code to apply statistical techniques to analysing and interpreting astronomical data sets.
+[106] A: explain the processes and physics involved in stellar evolution, including the processes that bring about stellar death.
+      B: design, conduct, analyse and report on observational experiments related to measuring the radiation from stars, galaxies and other astronomical objects in order to determine their properties.
+[107] A: Create simple materials and shaders that demonstrate an understanding of the fundamental building blocks of computer graphics, including textures, UVs and normals.
+      B: Import and transform 3D models and animations from a modelling tool into a 3D game engine.
+[108] A: Design and develop small, functional database applications using modern database design methods.
+      B: Demonstrate disciplinary knowledge of game design and development theories and practices.
+[109] A: understand and apply appropriately the taught concepts such as variables, loops, functions, conditionals and compound data in the implementation of well-designed programs
+      B: Identify cybersecurity risks faced by business and relate the management of those risks to the enterprise governance.
+[110] A: Critically analyse and apply consumer behaviour theory to real-world consumption experiences.
+      B: Explain how companies are formed, differentiate between types of companies, and analyse and evaluate the role and obligations of directors.
+[111] A: Describe how cells in the human body work together to send signals, control gene activity, move substances, respond to their environment, and communicate with each other. (Scientist & Scholar)
+      B: Measure and interpret physiological data obtained at rest and during exercise. (Scientist & Scholar and Exercise Science Practitioner)
+[112] A: Describe the organisation of the nervous system, including how communication occurs within the nervous system. (Capability 1: Scientist and Scholar)
+      B: Communicate the mechanisms of action and interactions of specific drug classes that influence nervous system function. (Capability 2: Practitioner)
+[113] A: implement programs from algorithms, showing an understanding of control flow
+      B: demonstrate foundational learning skills including active engagement in their learning process
+[114] A: Explore the types of customer data that are collected, both by traditional and digital methods.
+      B: Demonstrate the ability to locate and access peer-reviewed scientific literature using relevant search engines and databases (Exercise Science Practitioner)
+[115] A: Develop learning techniques to effectively manage academic tasks and address learning challenges specific to the clinical sciences discipline. (Scientist and Scholar)
+      B: Demonstrate effective interpersonal and professional communication skills, including the ability to clearly and accurately convey clinical anatomical concepts to both peers and non-specialist audiences, whether working independently or as part of a team. (Practitioner)
+[116] A: Evaluate and use elementary Bayesian inference methods.
+      B: Critically evaluate strategies to support health behaviour change initiatives and promote exercise adherence
+[117] A: Explain how companies are formed, differentiate between types of companies, and analyse and evaluate the role and obligations of directors.
+      B: Analyse insolvency mechanisms and issues, and critically assess corporate insolvency in the current regulatory environment.
+[118] A: Demonstrate understanding of the basic concepts that underlie modern database management systems.
+      B: Apply mathematical reasoning to simple problem solving in the context of elementary algebra and calculus.
+[119] A: discuss principles and difficulties of observational methods that allow us to interpret the physical characteristics of an astronomical object based on the light we receive from it.
+      B: Analyse and interpret basic mechanical and physiological data relevant to an exercise scientist (Scientist and Scholar)
+[120] A: Demonstrate an understanding of technical concepts related to information security, computing, networking, and emerging technologies.
+      B: Report on cyber criminality (in terms of activities, perpetrators and their motives) as well as its impact on society.
+[121] A: Apply metrics in the context of cosmological models, and understand how observations constrain different components of these models.
+      B: Demonstrate knowledge of current galaxy formation and evolutionary theories, and the techniques used to simulate these.
+[122] A: Demonstrate disciplinary knowledge of game design and development theories and practices.
+      B: Discuss the mechanical principles to describe the motion of the human body (Exercise Science Practitioner)
+[123] A: Evaluate and use likelihood-based inference methods.
+      B: communicate complex physical concepts in writing and orally.
+[124] A: demonstrate foundational learning skills including active engagement in their learning process
+      B: Describe sustainable development practices, commonly used guidelines for Integrated Reporting and extended external reporting using XBRL.
+[125] A: Apply core pharmacological concepts related to pharmacokinetics and pharmacodynamics to explain drug behaviour and effects in the human body. (Scientist and Scholar)
+      B: Demonstrate skills in identifying and differentiating musculoskeletal and vascular structures through surface anatomy. (Exercise Science Practitioner)
+[126] A: identify and describe ethical issues to academic and professional practice, and demonstrate active engagement in the learning process
+      B: Explain the principal properties of stellar populations, including their evolution with time and metallicity, and how their properties are modelled.
+[127] A: Create, communicate and interpret the content of mathematical models relevant to foundation level science topics.
+      B: Develop learning techniques to effectively manage academic tasks and address learning challenges specific to the clinical sciences discipline. (Scientist and Scholar)
+[128] A: Use Microsoft Excel for fundamental managerial accounting planning, control and evaluation tasks.
+      B: Apply appropriate management accounting concepts and techniques to formulate informed solutions to business problems.
+[129] A: Apply skills in processing accounting information and explain classifications and/or treatments to essential accounting processes and the use of accounting software.
+      B: Analyse financial statements and integrate knowledge and skills to solve business problems including working capital.
+[130] A: explain the processes and physics involved in stellar evolution, including the processes that bring about stellar death.
+      B: apply computational techniques to model physical phenomena in different astrophysical environments using the Unix environment and elements of the python computing language.
+[131] A: adhere to standard software engineering practices, including documentation, unit testing and debugging
+      B: Describe the function and interaction of human physiological systems at rest. (Scientist & Scholar and Exercise Science Practitioner)
+[132] A: design and write code to implement a program description in a high-level programming language
+      B: identify and describe ethical issues to academic and professional practice, and demonstrate active engagement in the learning process
+[133] A: Identify and describe the role of accounting in organisational governance and stewardship, and in discharging accountability to stakeholders.
+      B: Apply skills in processing accounting information and explain classifications and/or treatments to essential accounting processes and the use of accounting software.
+[134] A: Develop an effective integrated marketing communications plan and professionally communicate it to the appropriate audience.
+      B: Explain the regulatory accounting environment and its impact for the accounting profession.
+[135] A: design and write python code to apply statistical techniques to analysing and interpreting astronomical data sets.
+      B: Describe the primary physiological functions of the broad range of human cells in a sport and exercise context. (Scientist and Scholar)
+[136] A: compare theoretical models to real data and quantify significance and likelihood.
+      B: Apply scientific knowledge and current research to interpret clinical scenarios and communicate key concepts in health and disease mechanisms. (Capability 4: Practitioner)
+[137] A: Apply investment and financing concepts to business decisions and critically evaluate financial viability including an exploration of financial models, forecasting capital expenditures, working capital needs and financing events.
+      B: Explain the regulatory environment for financial reporting including the conceptual framework by employing appropriate theories underlying accounting practice.
+[138] A: Evaluate marketing research principles, techniques, and tools
+      B: Explain the regulatory accounting environment and its impact for the accounting profession.
+[139] A: Explain the key Big Data concepts and techniques.
+      B: Apply cyber hygiene principles to achieve personal security in the digital world.
+[140] A: Apply a knowledge of the principles of ethical conduct of research, including an examination of the role of open access to data and publications.
+      B: Critically assess various digital and social marketing and their role in creating and measuring value.
+[141] A: Prototype a simple game within a game engine.
+      B: Evaluate your work through self-reflection
+[142] A: demonstrate knowledge of the way radiation interacts with matter in different astrophysical environments through solving radiative transfer problems.
+      B: Calculate the dynamical properties of stellar systems based on analytic gravitational potentials, and use these to make inferences about galaxies.
+[143] A: Design and apply qualitative and quantitative research to explore real-world market issues and opportunities, individually and/or in collaboration
+      B: Communicate the mechanisms of action and interactions of specific drug classes that influence nervous system function. (Capability 2: Practitioner)
+[144] A: Apply the rules of International Financial Reporting Standards (IFRS) and its Australian equivalents Australian Accounting Standards Board (AASB) to selected financial transactions and events, and prepare a complete set of financial statements based on both accrual and cash accounting.
+      B: Apply appropriate accounting treatments of company accounting in relation to equity and debt financing.
+[145] A: Identify the features of the Australian legal system including the law of contract and distinguish business organisations based on their legal characteristics.
+      B: Explain how companies are formed, differentiate between types of companies, and analyse and evaluate the role and obligations of directors.
+[146] A: Analyse risks and develop control plans pertinent to primary business activities.
+      B: Analyse insolvency mechanisms and issues, and critically assess corporate insolvency in the current regulatory environment.
+[147] A: Recognise features of corporate functionality and management issues, including the role and obligations of directors and insolvency regulation.
+      B: Apply investment and financing concepts to business decisions and critically evaluate financial viability including an exploration of financial models, forecasting capital expenditures, working capital needs and financing events.
+[148] A: Demonstrate an understanding of technical concepts related to information security, computing, networking, and emerging technologies.
+      B: Apply cyber hygiene principles to achieve personal security in the digital world.
+[149] A: Develop learning techniques to effectively manage academic tasks and address learning challenges specific to the clinical sciences discipline. (Scientist and Scholar)
+      B: Use reflective practice to assess own personal performance, explore career aspirations, and identify areas for development. (Professional)
+[150] A: apply the equations of stellar structure and the simplifications that lead to polytropic stellar models.
+      B: apply advanced knowledge of fundamental analysis techniques used in astronomy research.
