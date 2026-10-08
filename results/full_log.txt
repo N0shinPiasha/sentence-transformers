@@ -1,0 +1,34 @@
+Device: cuda (Tesla T4)
+
+=== BIOSSES (Biomedical) ===
+  encoding 182 unique texts ...
+  pairs=100  Spearman=51.62  (0.1 min)
+
+=== Quora Question Pairs (Everyday questions) ===
+  encoding 73,324 unique texts ...
+  pairs=40,430  ROC-AUC=80.30  (1.9 min)
+
+=== Financial PhraseBank (Finance) ===
+  encoding 2,259 unique texts ...
+  2,259 sentences
+  pairs=2,550,411  ROC-AUC=52.09  (0.1 min)
+
+=== CUAD (Legal contracts) ===
+  1,416 clauses, 34 clause types
+  encoding 1,416 unique texts ...
+  pairs=1,001,820  ROC-AUC=73.55  (0.1 min)
+
+=== Amazon ESCI (E-commerce search) ===
+  434,234 US pairs collected
+  encoding 384,020 unique texts ...
+  pairs=434,234  Spearman=15.05  (23.8 min)
+
+===========================================================================
+FULL evaluation on cuda  |  reference: STS-B = 76.99 Spearman
+             dataset             domain   pairs   metric  score     time status
+             BIOSSES         Biomedical     100 Spearman  51.62  0.1 min     ok
+Quora Question Pairs Everyday questions   40430  ROC-AUC  80.30  1.9 min     ok
+Financial PhraseBank            Finance 2550411  ROC-AUC  52.09  0.1 min     ok
+                CUAD    Legal contracts 1001820  ROC-AUC  73.55  0.1 min     ok
+         Amazon ESCI  E-commerce search  434234 Spearman  15.05 23.8 min     ok
+Saved results/full_results.csv

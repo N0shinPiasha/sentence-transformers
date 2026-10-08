@@ -1,0 +1,6 @@
+dataset,domain,pairs,metric,score,time,status
+BIOSSES,Biomedical,100,Spearman,51.62,0.1 min,ok
+Quora Question Pairs,Everyday questions,40430,ROC-AUC,80.3,1.9 min,ok
+Financial PhraseBank,Finance,2550411,ROC-AUC,52.09,0.1 min,ok
+CUAD,Legal contracts,1001820,ROC-AUC,73.55,0.1 min,ok
+Amazon ESCI,E-commerce search,434234,Spearman,15.05,23.8 min,ok
