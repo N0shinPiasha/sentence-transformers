@@ -28,6 +28,18 @@
     pair types rated        = {'same_discipline': 8, 'same_unit': 7, 'cross_discipline': 5}
     SBERT vs human (same pairs): Spearman = 75.68
     SBERT vs LLM   (same pairs): Spearman = 74.72
+  Round 2 blind (my_ratings_blind.csv): n = 50 pairs
+    Spearman rho            = 0.62  [95% CI 0.41, 0.79]
+    Pearson r               = 0.60
+    Quadratic-weighted kappa= 0.54
+    Krippendorff alpha (ord)= 0.58
+    Exact agreement         = 42%
+    Within +/-1 point       = 72%
+    Mean |difference|       = 0.98
+    Mean (human - LLM)       = +0.58   (human mean 1.90, LLM mean 1.32)
+    pair types rated        = {'cross_discipline': 17, 'same_discipline': 17, 'same_unit': 16}
+    SBERT vs human (same pairs): Spearman = 58.21
+    SBERT vs LLM   (same pairs): Spearman = 81.46
 
 ========================================================================
 2b. AGREEMENT BETWEEN THE TWO LLM JUDGES (pairs labelled by both)
