@@ -38,7 +38,14 @@ for start in range(0, len(pairs), BATCH_SIZE):
         f.write(PROMPT + "\n".join(lines) + "\n")
     print(f"batch_{n_batches}.txt  ->  pairs {chunk.pair_id.min()}-{chunk.pair_id.max()}")
 
-# empty file where you paste the LLM's answers
-with open("llm_labels.csv", "w") as f:
-    f.write("pair_id,llm_score,llm_reason\n")
-print(f"\nCreated {n_batches} batches, judge_prompt.txt and an empty llm_labels.csv")
+# empty file where you paste the LLM's answers (never overwrite answers already pasted)
+try:
+    has_answers = len(open("llm_labels.csv").read().splitlines()) > 1
+except FileNotFoundError:
+    has_answers = False
+if has_answers:
+    print("llm_labels.csv already contains LLM answers - left unchanged.")
+else:
+    with open("llm_labels.csv", "w") as f:
+        f.write("pair_id,llm_score,llm_reason\n")
+print(f"\nCreated {n_batches} batches and judge_prompt.txt")

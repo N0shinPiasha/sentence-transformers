@@ -1,0 +1,118 @@
+You are an expert in university curriculum design. You will rate how similar in MEANING two university Unit Learning Outcomes (ULOs) are.
+
+Use this scale (0-5). Judge what the student must be able to do, not shared words.
+5 = Equivalent: same skill, same subject, same level. Could replace each other.
+4 = Mostly equivalent: same skill and subject; small differences in scope or detail.
+3 = Roughly similar: same general skill OR same specific topic, but clear differences.
+2 = Partly related: share one aspect (e.g. both about data analysis, or both about communication) but different overall goals.
+1 = Loosely related: different topics; only a very general connection.
+0 = Unrelated: nothing meaningful in common.
+
+Rules:
+- Rate every pair independently.
+- Output ONLY CSV, no other text, with this exact header:
+pair_id,llm_score,llm_reason
+- llm_score must be a whole number 0-5.
+- llm_reason must be under 20 words and must not contain commas.
+
+PAIRS:
+[401] A: Apply techniques for storing large volumes of data.
+      B: Apply techniques for handling high-dimensional big data.
+[402] A: Explain the regulatory environment for financial reporting including the conceptual framework by employing appropriate theories underlying accounting practice.
+      B: Describe how cells in the human body work together to send signals, control gene activity, move substances, respond to their environment, and communicate with each other. (Scientist & Scholar)
+[403] A: Critically assess various digital and social marketing and their role in creating and measuring value.
+      B: Analyse qualitative and quantitative data using appropriate software packages (Scientist and Scholar)
+[404] A: Apply game design principles and processes in the production of a simple game.
+      B: Apply mathematical reasoning to simple problem solving in the context of elementary algebra and calculus.
+[405] A: Describe the business environment of the accounting profession.
+      B: Identify the organisation and roles of key brain structures in regulating motor, sensory, homeostatic and cognitive functions. (Capability 1: Scientist and Scholar)
+[406] A: Create a project plan.
+      B: Create and analyse design models.
+[407] A: Explain the key Big Data concepts and techniques.
+      B: Explore the types of customer data that are collected, both by traditional and digital methods.
+[408] A: Evaluate factors influencing disease development and transmission, and the role of medical microbiology and epidemiology in infection control and disease prevention. (Capability 3: Engaged Global Citizen)
+      B: Demonstrate proficiency in safely instructing a range of exercises typically used in resistance training (Exercise Science Practitioner)
+[409] A: Communicate game design and development decisions in appropriate formats.
+      B: Apply game design principles and processes in the production of a simple game.
+[410] A: Design and develop small, functional database applications using modern database design methods.
+      B: Develop skills in using a industrial-strength database tools and interactive development environments for building databases.
+[411] A: Critically discuss astronomical topics in small teams to come up with effective solutions to problems.
+      B: solve problems in real-time during SGTA and workshops, and demonstrate solutions to peers
+[412] A: design and write python code to apply statistical techniques to analysing and interpreting astronomical data sets.
+      B: Create, communicate and interpret the content of mathematical models relevant to foundation level science topics.
+[413] A: Develop competences in key technical aspects in accounting practice and be able to process and interpret basic accounting information.
+      B: Apply appropriate accounting treatments of company accounting in relation to equity and debt financing.
+[414] A: Explain the basic qualitative principles of, and observational evidence for, current cosmological models.
+      B: use numerical codes to solve astrophysical problems.
+[415] A: Apply a knowledge of the principles of ethical conduct of research, including an examination of the role of open access to data and publications.
+      B: Examine the role of Accounting in a contemporary social context with a focus on business ethics and responsible management so as to develop skills in resolving conflict and ethical dilemma.
+[416] A: Analyse risks and develop control plans pertinent to primary business activities.
+      B: Describe the major structural features of biological cells at the biochemical and molecular levels.
+[417] A: Articulate clearly a coherent argument in written and oral form to a variety of audiences.
+      B: effectively communicate the results of astronomical research in written and oral form.
+[418] A: adhere to standard software engineering practices, including documentation, unit testing and debugging
+      B: Critically evaluate the relation between cyber security and privacy in the context of a legal and regulatory framework.
+[419] A: Describe the business environment of the accounting profession.
+      B: Apply skills in processing accounting information and explain classifications and/or treatments to essential accounting processes and the use of accounting software.
+[420] A: Describe the physiological processes of the alimentary system, the function and metabolism of nutrients, and how these are regulated. (Capability 1: Scientist and Scholar)
+      B: Explain how different physiological systems interact and influence each other in the context of exercise. (Scientist & Scholar)
+[421] A: communicate complex physical concepts in writing and orally.
+      B: Use a variety of tools to understand the customer, and create value through marketing efforts.
+[422] A: demonstrate knowledge of the way radiation interacts with matter in different astrophysical environments through solving radiative transfer problems.
+      B: demonstrate an understanding of the dynamics of gas flows in Astrophysical environments, including magnetic fields, shocks and viscosity.
+[423] A: Describe the business environment of the accounting profession.
+      B: Explain the regulatory accounting environment and its impact for the accounting profession.
+[424] A: Design and develop small, functional database applications using modern database design methods.
+      B: Critically evaluate a range of theories to decode the components of persuasive communications
+[425] A: Demonstrate knowledge of quantitative and qualitative galaxy morphology from a variety of observational evidence, and relate this to theories of galaxy formation and evolution.
+      B: Explain the basic qualitative principles of, and observational evidence for, current cosmological models.
+[426] A: Apply game design theory to analyse existing games.
+      B: Adapt communication and teamwork strategies to effectively engage with individuals from diverse cultural backgrounds. (Citizen)
+[427] A: critically evaluate scientific outcomes in light of applied analysis techniques.
+      B: Describe the scientific rationale for the selection of exercises and programming variables to achieve specific outcomes (Scientist and Scholar)
+[428] A: Complete different database programming tasks to specification using SQL
+      B: Demonstrate competency in the use of appropriate reference styles (Scientist and Scholar)
+[429] A: Apply knowledge from functional anatomy to understand strength and conditioning principles (Exercise Science Practitioner)
+      B: Demonstrate skills in identifying and differentiating musculoskeletal and vascular structures through surface anatomy. (Exercise Science Practitioner)
+[430] A: Apply metrics in the context of cosmological models, and understand how observations constrain different components of these models.
+      B: Apply the rules of International Financial Reporting Standards (IFRS) and its Australian equivalents Australian Accounting Standards Board (AASB) to selected financial transactions and events, and prepare a complete set of financial statements based on both accrual and cash accounting.
+[431] A: Apply techniques for storing large volumes of data.
+      B: Apply marketing concepts, frameworks and theories to a range of real world scenarios.
+[432] A: Apply technical and artistic theory to implementing camera and lighting in the creation of simple scenes to achieve visual effects.
+      B: Apply mathematical reasoning to simple problem solving in the context of elementary algebra and calculus.
+[433] A: Use a variety of tools to understand the customer, and create value through marketing efforts.
+      B: Analyse and interpret marketing practices to generate actionable insights through the use of marketing technology tools.
+[434] A: Demonstrate disciplinary knowledge of game design and development theories and practices.
+      B: Demonstrate knowledge of current galaxy formation and evolutionary theories, and the techniques used to simulate these.
+[435] A: Critically evaluate a range of theories to decode the components of persuasive communications
+      B: Explain the mechanism of action and adverse effects of commonly used therapeutic agents and discuss how drug interactions and individual variability impact drug safety in clinical practice. (Practitioner)
+[436] A: Apply skills in processing accounting information and explain classifications and/or treatments to essential accounting processes and the use of accounting software.
+      B: Explain the regulatory accounting environment and its impact for the accounting profession.
+[437] A: Work with version control, configuration management, unit/regression testing, issue tracking, and debugging tools.
+      B: Design and apply qualitative and quantitative research to explore real-world market issues and opportunities, individually and/or in collaboration
+[438] A: discuss principles and difficulties of observational methods that allow us to interpret the physical characteristics of an astronomical object based on the light we receive from it.
+      B: Describe the primary physiological functions of the broad range of human cells in a sport and exercise context. (Scientist and Scholar)
+[439] A: Explain joint complexes of the axial and appendicular skeleton and their independent and composite functions in posture and movement analysis in exercise. (Exercise Science Practitioner)
+      B: Analyse movement and identify the roles of muscle/s in producing and controlling the movement of a joint. (Exercise Science Practitioner)
+[440] A: Identify and explain common contraindications for participation in strength and conditioning training (Scientist and Scholar)
+      B: Outline the common barriers and facilitators of lifestyle change and disease prevention for diverse populations
+[441] A: Communicate pharmacological concepts effectively in individual and team settings, using reflective practice to identify and address misconceptions and to evaluate digital tools and emerging technologies. (Professional)
+      B: Effectively communicate scientific concepts related to alimentary health and disease and reflect on how scientific knowledge informs clinical practice. (Capability 4: Professional)
+[442] A: Describe the organisation of the nervous system, including how communication occurs within the nervous system. (Capability 1: Scientist and Scholar)
+      B: Demonstrate competency in the use of appropriate reference styles (Scientist and Scholar)
+[443] A: apply problem solving skills to develop algorithms that solve small to medium-sized computational problems
+      B: Prototype a simple game within a game engine.
+[444] A: Explain key terminology and foundational concepts as they apply to exercise and sports science (Exercise Science Practitioner)
+      B: Describe and identify the appropriateness of research design and methods in applied exercise and sports science scenarios (Scientist and Scholar / Professional)
+[445] A: Critically analyse and apply consumer behaviour theory to real-world consumption experiences.
+      B: Clearly and professionally convey information using various communication techniques appropriate to both an individual and group setting. (Practitioner)
+[446] A: Apply game design principles and processes in the production of a simple game.
+      B: Prototype a simple game within a game engine.
+[447] A: Demonstrate knowledge of current galaxy formation and evolutionary theories, and the techniques used to simulate these.
+      B: demonstrate knowledge of the detailed structure and formation history of the Milky Way galaxy.
+[448] A: Demonstrate understanding of the basic concepts that underlie modern database management systems.
+      B: Design and develop small, functional database applications using modern database design methods.
+[449] A: Recognise and explain the major components of a basic functional assessment of the major body systems. (Scientist and Scholar)
+      B: Explain how different physiological systems interact and influence each other in the context of exercise. (Scientist & Scholar)
+[450] A: Apply skills in processing accounting information and explain classifications and/or treatments to essential accounting processes and the use of accounting software.
+      B: Apply scientific knowledge and current research to interpret clinical scenarios and communicate key concepts in health and disease mechanisms. (Capability 4: Practitioner)

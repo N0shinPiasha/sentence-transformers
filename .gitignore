@@ -72,3 +72,14 @@ tmp
 # Keep agents ignored
 .claude/
 .agents/
+
+# COMP8240 project
+/output/
+report/*.aux
+report/*.log
+report/*.bbl
+report/*.blg
+report/*.fdb_latexmk
+report/*.fls
+report/*.out
+report/*.synctex.gz

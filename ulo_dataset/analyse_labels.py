@@ -1,3 +1,9 @@
+"""
+Merge the pasted LLM labels (llm_labels.csv) with pairs.csv, run sanity checks and add SBERT cosines.
+Run from inside ulo_dataset/:   python analyse_labels.py
+Outputs: ulo_dataset_labelled.csv, label_report.txt
+"""
+
 import io
 
 import numpy as np
@@ -44,7 +50,9 @@ for t, m in data.groupby("pair_type")["llm_score"].mean().sort_values(ascending=
 try:
     mine = pd.read_csv("my_ratings.csv")
     mine["my_score"] = pd.to_numeric(mine["my_score"], errors="coerce")
-    both = mine.dropna(subset=["my_score"]).merge(llm, on="pair_id")
+    # match on the two outcome texts, not pair_id: pair ids change whenever pairs.csv is regenerated
+    both = mine.dropna(subset=["my_score"]).drop(columns="pair_id").merge(
+        data[["text_a", "text_b", "llm_score"]].dropna(), on=["text_a", "text_b"])
     if len(both) >= 5:
         rho = spearmanr(both["my_score"], both["llm_score"]).correlation
         mad = (both["my_score"] - both["llm_score"]).abs().mean()

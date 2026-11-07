@@ -1,0 +1,118 @@
+You are an expert in university curriculum design. You will rate how similar in MEANING two university Unit Learning Outcomes (ULOs) are.
+
+Use this scale (0-5). Judge what the student must be able to do, not shared words.
+5 = Equivalent: same skill, same subject, same level. Could replace each other.
+4 = Mostly equivalent: same skill and subject; small differences in scope or detail.
+3 = Roughly similar: same general skill OR same specific topic, but clear differences.
+2 = Partly related: share one aspect (e.g. both about data analysis, or both about communication) but different overall goals.
+1 = Loosely related: different topics; only a very general connection.
+0 = Unrelated: nothing meaningful in common.
+
+Rules:
+- Rate every pair independently.
+- Output ONLY CSV, no other text, with this exact header:
+pair_id,llm_score,llm_reason
+- llm_score must be a whole number 0-5.
+- llm_reason must be under 20 words and must not contain commas.
+
+PAIRS:
+[351] A: Identify and analyse the clinically-relevant anatomy of the major body systems and the changes characterising common system disorders both in situ and in medical imaging. (Scientist and Scholar)
+      B: Recognise and explain the major components of a basic functional assessment of the major body systems. (Scientist and Scholar)
+[352] A: Explain joint complexes of the axial and appendicular skeleton and their independent and composite functions in posture and movement analysis in exercise. (Exercise Science Practitioner)
+      B: Utilise relevant anatomical and lay terms in communication with a range of stakeholders (e.g., clients, families, carers and other health or exercise professionals). (Professional)
+[353] A: Evaluate the traditional aspects of accounting for business decision-making.
+      B: Discuss the importance and benefits of systems development methodologies and evaluate the role of ethics and ethical decision making within the Accounting Information System context.
+[354] A: Explain the regulatory accounting environment and its impact for the accounting profession.
+      B: Apply appropriate management accounting concepts and techniques to formulate informed solutions to business problems.
+[355] A: Identify and explain the fundamental principles of exercise and sports science sub-disciplines (Scientist and Scholar)
+      B: Measure and interpret physiological data obtained at rest and during exercise. (Scientist & Scholar and Exercise Science Practitioner)
+[356] A: Demonstrate proficiency in safely instructing a range of exercises typically used in resistance training (Exercise Science Practitioner)
+      B: Design and identify resistance training programs tailored to the specific needs of an individual across the lifespan for a range of outcomes including general health, hypertrophy, strength, and power (Exercise Science Practitioner)
+[357] A: Analyse financial statements and integrate knowledge and skills to solve business problems including working capital.
+      B: Describe the organisation of the nervous system, including how communication occurs within the nervous system. (Capability 1: Scientist and Scholar)
+[358] A: Import and transform 3D models and animations from a modelling tool into a 3D game engine.
+      B: Critically evaluate the capacity of data and technology to foster sustainable marketing practices.
+[359] A: Analyse data using computing packages which implement the most common Inference procedures.
+      B: Demonstrate the ability to locate and access peer-reviewed scientific literature using relevant search engines and databases (Exercise Science Practitioner)
+[360] A: apply the equations of stellar structure and the simplifications that lead to polytropic stellar models.
+      B: Apply metrics in the context of cosmological models, and understand how observations constrain different components of these models.
+[361] A: Analyse and interpret basic mechanical and physiological data relevant to an exercise scientist (Scientist and Scholar)
+      B: Measure and interpret physiological data obtained at rest and during exercise. (Scientist & Scholar and Exercise Science Practitioner)
+[362] A: Calculate the dynamical properties of stellar systems based on analytic gravitational potentials, and use these to make inferences about galaxies.
+      B: discuss stellar pulsations and role this plays in stellar evolution and mass loss.
+[363] A: Communicate exercise and sports science knowledge and data clearly using written, verbal, and digital formats suitable for academic and professional settings. (Professional)
+      B: Interpret, present, and communicate data in written and/or oral formats (Exercise Science Practitioner)
+[364] A: Define and manage a project involving empirical research.
+      B: Apply a knowledge of programming and/or use of appropriate applications (for e.g. data gathering, curation, cleaning or analysis) in the context of practical work relevant to an empirical research project.
+[365] A: Apply a knowledge of the principles of ethical conduct of research, including an examination of the role of open access to data and publications.
+      B: Communicate exercise and sports science knowledge and data clearly using written, verbal, and digital formats suitable for academic and professional settings. (Professional)
+[366] A: Apply investment and financing concepts to business decisions and critically evaluate financial viability including an exploration of financial models, forecasting capital expenditures, working capital needs and financing events.
+      B: Describe the anatomical organisation of the alimentary system, its neurovasculature, and its supporting structures within the head, neck, and trunk. (Capability 1: Scientist and Scholar)
+[367] A: explain the processes and physics involved in stellar evolution, including the processes that bring about stellar death.
+      B: Explain the principal properties of stellar populations, including their evolution with time and metallicity, and how their properties are modelled.
+[368] A: Create simple materials and shaders that demonstrate an understanding of the fundamental building blocks of computer graphics, including textures, UVs and normals.
+      B: Apply medical terminology to describe pathological processes, including the body's systemic and local responses to tissue injury, infection and neoplastic transformation. (Capability 1: Scientist and Scholar)
+[369] A: Identify and explain the use of technical art techniques implemented in a 3D scene.
+      B: Identify and analyse the clinically-relevant anatomy of the major body systems and the changes characterising common system disorders both in situ and in medical imaging. (Scientist and Scholar)
+[370] A: Demonstrate effective communication and interaction skills through the delivery of oral presentations and engagement in group discussions
+      B: Demonstrate effective interpersonal and professional communication skills, including the ability to clearly and accurately convey clinical anatomical concepts to both peers and non-specialist audiences, whether working independently or as part of a team. (Practitioner)
+[371] A: use standard software engineering practices and tools to document, debug, test and manage their programs
+      B: describe, discuss and connect key topics of modern Astronomy and Astrophysics. They will be able to understand the relationship between advances in research in these areas and the underlying tools and techniques.
+[372] A: Apply skills in processing accounting information and explain classifications and/or treatments to essential accounting processes and the use of accounting software.
+      B: Apply appropriate accounting treatments of company accounting in relation to equity and debt financing.
+[373] A: Apply metrics in the context of cosmological models, and understand how observations constrain different components of these models.
+      B: Apply a range of different strategies in a variety of context to build rapport, overcome resistance, and find acceptance, individually and/or in collaboration with peers.
+[374] A: Develop competences in key technical aspects in accounting practice and be able to process and interpret basic accounting information.
+      B: Discuss and analyse management accounting issues and information.
+[375] A: Apply skills in processing accounting information and explain classifications and/or treatments to essential accounting processes and the use of accounting software.
+      B: Discuss and analyse management accounting issues and information.
+[376] A: Apply marketing concepts, frameworks and theories to a range of real world scenarios.
+      B: Distinguish between management and financial accounting and assess business operations using various product costing, budgeting and decision-making techniques
+[377] A: independently solve complex computational and technical problems related to astronomy research projects.
+      B: Explain the multifactorial nature of health and disease by integrating knowledge of host defence mechanisms, immune responses, and genetic and biological factors that contribute to disease. (Capability 2: Practitioner)
+[378] A: Critically analyse and apply consumer behaviour theory to real-world consumption experiences.
+      B: Apply market research knowledge and skills to interpret research results and communicate results and recommendations in a professional manner
+[379] A: Communicate the mechanisms of action and interactions of specific drug classes that influence nervous system function. (Capability 2: Practitioner)
+      B: Measure and interpret physiological data obtained at rest and during exercise. (Scientist & Scholar and Exercise Science Practitioner)
+[380] A: Describe sustainable development practices, commonly used guidelines for Integrated Reporting and extended external reporting using XBRL.
+      B: Apply data protection and privacy regulations when using or sharing data and information in the business environment.
+[381] A: Explain the multifactorial nature of health and disease by integrating knowledge of host defence mechanisms, immune responses, and genetic and biological factors that contribute to disease. (Capability 2: Practitioner)
+      B: Discuss the cellular mechanisms that contribute to the maintenance of genetic stability or to genetic variation.
+[382] A: Complete different database programming tasks to specification using SQL
+      B: Perform calculations, including rates of changes and integrals, of elementary functions used in science and economics (including linear, polynomial, exponential, logarithmic, and trigonometric) and interpret results of these calculations.
+[383] A: Demonstrate knowledge of the fundamental principles of inference.
+      B: Describe the key anatomical structures of the major systems of the human body that are relevant for an exercise scientist and explain their primary functions. (Scientist and Scholar)
+[384] A: identify and describe ethical issues to academic and professional practice, and demonstrate active engagement in the learning process
+      B: Demonstrate foundational learning skills including active engagement in the learning process.
+[385] A: compare theoretical models to real data and quantify significance and likelihood.
+      B: Identify and define key terms, concepts, frameworks and models of marketing communications.
+[386] A: Explain the key Big Data concepts and techniques.
+      B: Apply core pharmacological concepts related to pharmacokinetics and pharmacodynamics to explain drug behaviour and effects in the human body. (Scientist and Scholar)
+[387] A: Apply knowledge from functional anatomy to understand strength and conditioning principles (Exercise Science Practitioner)
+      B: Identify and explain common contraindications for participation in strength and conditioning training (Scientist and Scholar)
+[388] A: Apply techniques for storing large volumes of data.
+      B: Develop learning techniques to effectively manage academic tasks and address learning challenges specific to the clinical sciences discipline. (Scientist and Scholar)
+[389] A: Critically discuss astronomical topics in small teams to come up with effective solutions to problems.
+      B: Apply metrics in the context of cosmological models, and understand how observations constrain different components of these models.
+[390] A: Explain the mechanism of action and adverse effects of commonly used therapeutic agents and discuss how drug interactions and individual variability impact drug safety in clinical practice. (Practitioner)
+      B: Demonstrate the ability to locate and access peer-reviewed scientific literature using relevant search engines and databases (Exercise Science Practitioner)
+[391] A: Create, communicate and interpret the content of mathematical models relevant to foundation level science topics.
+      B: Describe the key anatomical structures of the major systems of the human body that are relevant for an exercise scientist and explain their primary functions. (Scientist and Scholar)
+[392] A: Apply marketing concepts, frameworks and theories to a range of real world scenarios.
+      B: Design and apply qualitative and quantitative research to explore real-world market issues and opportunities, individually and/or in collaboration
+[393] A: use numerical codes to solve astrophysical problems.
+      B: Distinguish between management and financial accounting and assess business operations using various product costing, budgeting and decision-making techniques
+[394] A: Apply cyber hygiene principles to achieve personal security in the digital world.
+      B: Analyse qualitative and quantitative data using appropriate software packages (Scientist and Scholar)
+[395] A: demonstrate an understanding of a range of instrumentation topics and how they are connect to astronomical discoveries.
+      B: effectively communicate the results of astronomical research in written and oral form.
+[396] A: Examine the molecular processes involved in cell division, DNA replication, transcription, and translation.
+      B: Apply biochemical and genetic knowledge to analyse and communicate biological processes.
+[397] A: Apply techniques for storing large volumes of data.
+      B: Apply mathematical reasoning to simple problem solving in the context of elementary algebra and calculus.
+[398] A: Explain key terminology and foundational concepts as they apply to exercise and sports science (Exercise Science Practitioner)
+      B: Measure and interpret physiological data obtained at rest and during exercise. (Scientist & Scholar and Exercise Science Practitioner)
+[399] A: Evaluate the role of Information Systems and Accounting Information Systems in supporting the business processes of an organisation
+      B: Discuss the importance and benefits of systems development methodologies and evaluate the role of ethics and ethical decision making within the Accounting Information System context.
+[400] A: Explain key terminology and foundational concepts as they apply to exercise and sports science (Exercise Science Practitioner)
+      B: Communicate exercise and sports science knowledge and data clearly using written, verbal, and digital formats suitable for academic and professional settings. (Professional)

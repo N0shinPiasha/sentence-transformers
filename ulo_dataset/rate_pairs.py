@@ -1,7 +1,18 @@
+"""
+Rate ULO pairs by hand in the terminal (scores are saved after every answer).
 
+    python ulo_dataset/rate_pairs.py                         # rates my_ratings.csv
+    python ulo_dataset/rate_pairs.py my_ratings_blind.csv    # rates another sheet
+"""
+
+import sys
 import textwrap
+from pathlib import Path
 
 import pandas as pd
+
+HERE = Path(__file__).resolve().parent
+SHEET = HERE / (sys.argv[1] if len(sys.argv) > 1 else "my_ratings.csv")
 
 GUIDE = """
   5 = same thing            4 = almost the same
@@ -10,7 +21,7 @@ GUIDE = """
   (judge the MEANING, not shared words)   q = save and quit
 """
 
-df = pd.read_csv("my_ratings.csv")
+df = pd.read_csv(SHEET)
 df["my_score"] = pd.to_numeric(df["my_score"], errors="coerce")
 todo = df.index[df["my_score"].isna()].tolist()
 print(f"{len(df) - len(todo)} already rated, {len(todo)} to go.")
@@ -31,8 +42,8 @@ for n, i in enumerate(todo, start=1):
     if ans == "q":
         break
     df.loc[i, "my_score"] = int(ans)
-    df.to_csv("my_ratings.csv", index=False)     
+    df.to_csv(SHEET, index=False)
 df["my_score"] = df["my_score"].astype("Int64")
-df.to_csv("my_ratings.csv", index=False)
+df.to_csv(SHEET, index=False)
 done = df["my_score"].notna().sum()
 print(f"\nSaved. {done}/{len(df)} pairs rated.")

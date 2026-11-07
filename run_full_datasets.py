@@ -1,3 +1,25 @@
+"""
+FULL evaluation of the replicated SBERT model on the five existing datasets.
+(The earlier run_existing_datasets.py used 2,000-pair samples; see the final report.)
+
+Model: sentence-transformers/bert-base-nli-mean-tokens  (STS-B replication: 76.99)
+
+Dataset               What "full" means here                              Metric
+BIOSSES               all 100 pairs                                       Spearman
+Quora (QQP)           all 40,430 pairs of the GLUE validation split       ROC-AUC
+Financial PhraseBank  every pair of the 2,259 distinct "AllAgree"         ROC-AUC (same vs different sentiment)
+                      sentences (2,264 lines, 5 exact duplicates dropped)
+CUAD                  every pair of the 1,416 test-set clauses            ROC-AUC (same vs different clause type)
+Amazon ESCI           all 434,234 US query-product pairs, test split      Spearman (Exact=3 ... Irrelevant=0)
+
+Speed tricks: each unique sentence is encoded only once, and the "every pair"
+datasets use one matrix multiplication instead of encoding pairs.
+
+Run everything (best on Google Colab with a GPU; ESCI takes about 24 min on a T4):
+    python run_full_datasets.py all
+Or only some datasets (all but ESCI are fine on a CPU):
+    python run_full_datasets.py biosses qqp fpb cuad esci
+"""
 
 
 import io

@@ -1,3 +1,91 @@
+# COMP8240 project: Sentence-BERT Revisited
+
+**Noshin Anjum Malik Piasha (61158445), Macquarie University, Session 2 2026**
+
+This repository is a fork of [sentence-transformers](https://github.com/UKPLab/sentence-transformers),
+the official code of *Sentence-BERT* (Reimers & Gurevych, EMNLP-IJCNLP 2019). The library
+code is unchanged; the project adds the scripts and data listed below to:
+
+1. replicate the paper's STS-B results (Table 1),
+2. test the same model on five existing datasets from other domains, and
+3. build and evaluate a new dataset of Macquarie University unit learning outcomes (ULOs)
+   labelled by an LLM judge and checked against human ratings.
+
+## Results at a glance
+
+| Experiment | Data | Metric | Result |
+|---|---|---|---|
+| Replication, SBERT-NLI-base | STS-B test, 1,379 pairs | Spearman x100 | **76.99** (paper 77.03) |
+| Replication, SBERT-NLI-large | STS-B test, 1,379 pairs | Spearman x100 | **79.20** (paper 79.23) |
+| Quora Question Pairs | GLUE validation, 40,430 pairs | ROC-AUC x100 | 80.30 |
+| CUAD (legal clauses) | 1,416 test clauses, 1.0M pairs | ROC-AUC x100 | 73.55 |
+| BIOSSES (biomedical) | 100 pairs | Spearman x100 | 51.62 |
+| Financial PhraseBank | 2,259 sentences, 2.55M pairs | ROC-AUC x100 | 52.09 |
+| Amazon ESCI (product search) | 434,234 US test pairs | Spearman x100 | 15.05 |
+| **New: ULO dataset** | 500 pairs, LLM-judge labels | Spearman x100 | run `ulo_dataset/evaluate_ulo.py` |
+
+## Repository map
+
+| Path | What it does | Main output |
+|---|---|---|
+| `sbert_replicate.py` | Replicates Table 1 of the paper on the full STS-B test set | `results/table1_replication.csv`, `results/replication_log.txt`, `results/sbert_predictions.csv` |
+| `run_existing_datasets.py` | First pass on 2,000-pair samples (kept for transparency, superseded) | `results/existing_datasets_results.csv`, `results/pred_*.csv` |
+| `run_full_datasets.py` | Full evaluation on the five existing datasets | `results/full_results.csv`, `results/full_log.txt` |
+| `extra_analysis.py` | Confidence intervals, TF-IDF baselines, sample diagnostics (no model needed) | `results/extra_analysis.txt` |
+| `robustness_checks.py` | CUAD multi-label and ESCI per-query (nDCG@10) checks | `results/robustness_*.txt` |
+| `train_sbert_nli.py` | Optional: trains SBERT from plain BERT with the paper's recipe (GPU) | `results/training_log.txt` |
+| `ulo_dataset/collect_ulo1.py` | Scrapes ULOs from unitguides.mq.edu.au (1 s delay between requests) | `ulos.csv` |
+| `ulo_dataset/make_pairs.py` | Cleans outcomes; samples 150 random pairs by type (v1) + 350 pairs by word-overlap band (v2), seed 42 | `ulos_clean.csv`, `pairs.csv`, `preprocessing_log.txt` |
+| `ulo_dataset/Prepare_LLM_batches.py` | Writes the fixed judge prompt and ten 50-pair batches | `judge_prompt.txt`, `batch_*.txt` |
+| `ulo_dataset/llm_labels.csv` | Final LLM judge labels for all 500 pairs (score 0-5 + reason) | |
+| `ulo_dataset/llm_labels_round1.csv` | First judge's labels for pairs 1-150 (used for judge-vs-judge agreement) | |
+| `ulo_dataset/rate_pairs.py`, `make_blind_sample.py` | Terminal tool for blind human ratings | `my_ratings.csv`, `my_ratings_blind.csv` |
+| `ulo_dataset/analyse_labels.py` | Merges labels, sanity checks, SBERT cosines | `ulo_dataset_labelled.csv`, `label_report.txt` |
+| `ulo_dataset/evaluate_ulo.py` | Agreement statistics, baselines, error analysis | `results/ulo_evaluation.txt`, `results/ulo_scores.csv` |
+| `report/` | LaTeX source of the final report and `make_figures.py` | `report/figures/` |
+
+Files from the proposal stage (500-pair STS-B subset): `results_comparison.md`, `test_sbert_gotfromfirstproposal.py`, `output.txt`, `comparison_output.png`.
+
+## How to run
+
+Tested in GitHub Codespaces (CPU, Python 3.14) and Google Colab (T4 GPU).
+
+```bash
+pip install -e .                         # this fork of sentence-transformers
+pip install -r requirements-project.txt
+
+python sbert_replicate.py                # about 30 min on a 2-core CPU
+python run_full_datasets.py biosses qqp fpb cuad   # CPU is fine
+python run_full_datasets.py esci         # 434k pairs: use a GPU (about 24 min on a T4)
+python extra_analysis.py                 # seconds, no model needed
+python robustness_checks.py cuad         # CPU is fine
+python robustness_checks.py esci         # GPU
+python ulo_dataset/evaluate_ulo.py       # seconds; add --models to re-encode with all baselines
+python report/make_figures.py
+```
+
+The ULO scripts inside `ulo_dataset/` that predate the final report (`collect_ulo1.py`,
+`make_pairs.py`, `Prepare_LLM_batches.py`, `analyse_labels.py`) use relative paths, so run them from that
+folder (`cd ulo_dataset`). Re-running them does not overwrite the saved ratings or LLM labels.
+The scraped data (collected 2026-10-07) is saved in `ulos.csv`, so nothing needs re-scraping.
+
+**On Colab:** `!git clone https://github.com/N0shinPiasha/sentence-transformers`, then
+`%cd sentence-transformers`, `!pip install -e . -r requirements-project.txt`, then e.g.
+`!python run_full_datasets.py all`.
+
+## Data notes
+
+- ULO texts are copyright Macquarie University. They were collected from public unit guide pages
+  for this assessment only; every row keeps its source URL and collection date.
+- LLM judge labels were produced with the fixed prompt in `ulo_dataset/judge_prompt.txt`, in batches of 50,
+  blind to SBERT scores (which are computed afterwards by `analyse_labels.py`).
+
+---
+
+*Everything below this line is the original sentence-transformers README.*
+
+---
+
 <!--- BADGES: START --->
 
 [![HF Models](https://img.shields.io/badge/%F0%9F%A4%97-models-yellow)](https://huggingface.co/models?library=sentence-transformers)

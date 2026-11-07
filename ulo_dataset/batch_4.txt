@@ -1,0 +1,118 @@
+You are an expert in university curriculum design. You will rate how similar in MEANING two university Unit Learning Outcomes (ULOs) are.
+
+Use this scale (0-5). Judge what the student must be able to do, not shared words.
+5 = Equivalent: same skill, same subject, same level. Could replace each other.
+4 = Mostly equivalent: same skill and subject; small differences in scope or detail.
+3 = Roughly similar: same general skill OR same specific topic, but clear differences.
+2 = Partly related: share one aspect (e.g. both about data analysis, or both about communication) but different overall goals.
+1 = Loosely related: different topics; only a very general connection.
+0 = Unrelated: nothing meaningful in common.
+
+Rules:
+- Rate every pair independently.
+- Output ONLY CSV, no other text, with this exact header:
+pair_id,llm_score,llm_reason
+- llm_score must be a whole number 0-5.
+- llm_reason must be under 20 words and must not contain commas.
+
+PAIRS:
+[151] A: Communicate pharmacological concepts effectively in individual and team settings, using reflective practice to identify and address misconceptions and to evaluate digital tools and emerging technologies. (Professional)
+      B: Describe how cells in the human body work together to send signals, control gene activity, move substances, respond to their environment, and communicate with each other. (Scientist & Scholar)
+[152] A: Demonstrate knowledge of quantitative and qualitative galaxy morphology from a variety of observational evidence, and relate this to theories of galaxy formation and evolution.
+      B: Discuss the mechanical principles to describe the motion of the human body (Exercise Science Practitioner)
+[153] A: Apply metrics in the context of cosmological models, and understand how observations constrain different components of these models.
+      B: Describe the primary physiological functions of the broad range of human cells in a sport and exercise context. (Scientist and Scholar)
+[154] A: Distinguish between management and financial accounting and assess business operations using various product costing, budgeting and decision-making techniques
+      B: Use Microsoft Excel for fundamental managerial accounting planning, control and evaluation tasks.
+[155] A: Create and analyse design models.
+      B: compare theoretical models to real data and quantify significance and likelihood.
+[156] A: Discuss and analyse management accounting issues and information.
+      B: Discuss the importance and benefits of systems development methodologies and evaluate the role of ethics and ethical decision making within the Accounting Information System context.
+[157] A: Evaluate and use elementary Bayesian inference methods.
+      B: Distinguish between management and financial accounting and assess business operations using various product costing, budgeting and decision-making techniques
+[158] A: Design and develop small, functional database applications using modern database design methods.
+      B: Apply game design theory to analyse existing games.
+[159] A: Communicate mathematical concepts, pertaining to foundation level science topics, in a variety of forms including graphically, numerically, in writing and by using equations.
+      B: Create, communicate and interpret the content of mathematical models relevant to foundation level science topics.
+[160] A: Apply Map-reduce techniques to a number of problems that involve Big Data.
+      B: Describe the scientific rationale for the selection of exercises and programming variables to achieve specific outcomes (Scientist and Scholar)
+[161] A: Identify the organisation and roles of key brain structures in regulating motor, sensory, homeostatic and cognitive functions. (Capability 1: Scientist and Scholar)
+      B: Describe the key anatomical structures of the major systems of the human body that are relevant for an exercise scientist and explain their primary functions. (Scientist and Scholar)
+[162] A: describe, discuss and connect key topics of modern Astronomy and Astrophysics. They will be able to understand the relationship between advances in research in these areas and the underlying tools and techniques.
+      B: Evaluate marketing research principles, techniques, and tools
+[163] A: Describe the key anatomical structures of the major systems of the human body that are relevant for an exercise scientist and explain their primary functions. (Scientist and Scholar)
+      B: Describe the primary physiological functions of the broad range of human cells in a sport and exercise context. (Scientist and Scholar)
+[164] A: Research and professionally communicate appropriate accounting treatment and recommendations through written assignments and presentations.
+      B: Clearly and professionally convey information using various communication techniques appropriate to both an individual and group setting. (Practitioner)
+[165] A: Create and analyse design models.
+      B: Use a variety of tools to understand the customer, and create value through marketing efforts.
+[166] A: Apply scientific knowledge and current research to interpret clinical scenarios and communicate key concepts in health and disease mechanisms. (Capability 4: Practitioner)
+      B: Communicate the mechanisms of action and interactions of specific drug classes that influence nervous system function. (Capability 2: Practitioner)
+[167] A: Apply game design theory to analyse existing games.
+      B: Critically analyse and apply consumer behaviour theory to real-world consumption experiences.
+[168] A: Apply marketing concepts, frameworks and theories to a range of real world scenarios.
+      B: Identify and define key terms, concepts, frameworks and models of marketing communications.
+[169] A: effectively communicate the results of astronomical research in written and oral form.
+      B: Apply scientific knowledge and current research to interpret clinical scenarios and communicate key concepts in health and disease mechanisms. (Capability 4: Practitioner)
+[170] A: Apply marketing concepts, frameworks and theories to a range of real world scenarios.
+      B: Communicate marketing solutions to a range of scenarios in a collaborative environment.
+[171] A: design, conduct, analyse and report on observational experiments related to measuring the radiation from stars, galaxies and other astronomical objects in order to determine their properties.
+      B: Identify and analyse the clinically-relevant anatomy of the major body systems and the changes characterising common system disorders both in situ and in medical imaging. (Scientist and Scholar)
+[172] A: Identify and analyse the clinically-relevant anatomy of the major body systems and the changes characterising common system disorders both in situ and in medical imaging. (Scientist and Scholar)
+      B: Analyse and interpret basic mechanical and physiological data relevant to an exercise scientist (Scientist and Scholar)
+[173] A: Apply anatomical knowledge to analyse clinical and functional presentations relating to musculoskeletal system. (Exercise Science Practitioner)
+      B: Demonstrate skills in identifying and differentiating musculoskeletal and vascular structures through surface anatomy. (Exercise Science Practitioner)
+[174] A: compare theoretical models to real data and quantify significance and likelihood.
+      B: Apply various theoretical models of health behaviour change to specific health issues
+[175] A: Evaluate the traditional aspects of accounting for business decision-making.
+      B: Distinguish between management and financial accounting and assess business operations using various product costing, budgeting and decision-making techniques
+[176] A: Explain the principal properties of stellar populations, including their evolution with time and metallicity, and how their properties are modelled.
+      B: Apply scientific knowledge and current research to interpret clinical scenarios and communicate key concepts in health and disease mechanisms. (Capability 4: Practitioner)
+[177] A: Use a variety of tools to understand the customer, and create value through marketing efforts.
+      B: Evaluate marketing research principles, techniques, and tools
+[178] A: apply machine learning techniques to identify structure and patterns in data, and interpret their significance.
+      B: use numerical codes to solve astrophysical problems.
+[179] A: Analyse the concept of customer value and its importance to an organisation.
+      B: Describe and identify the appropriateness of research design and methods in applied exercise and sports science scenarios (Scientist and Scholar / Professional)
+[180] A: Describe the function and interaction of human physiological systems at rest. (Scientist & Scholar and Exercise Science Practitioner)
+      B: Describe the primary physiological functions of the broad range of human cells in a sport and exercise context. (Scientist and Scholar)
+[181] A: Demonstrate knowledge of the fundamental principles of inference.
+      B: Evaluate and use likelihood-based inference methods.
+[182] A: effectively communicate the results of astronomical research in written and oral form.
+      B: Interpret, present, and communicate data in written and/or oral formats (Exercise Science Practitioner)
+[183] A: Demonstrate disciplinary knowledge of game design and development theories and practices.
+      B: Apply game design principles and processes in the production of a simple game.
+[184] A: Analyse and interpret marketing practices to generate actionable insights through the use of marketing technology tools.
+      B: Analyse sources of funding and financing needs.
+[185] A: Explain how different physiological systems interact and influence each other in the context of exercise. (Scientist & Scholar)
+      B: Describe the key anatomical structures of the major systems of the human body that are relevant for an exercise scientist and explain their primary functions. (Scientist and Scholar)
+[186] A: Apply python computer programming to solve laboratory problems
+      B: Use a variety of tools to understand the customer, and create value through marketing efforts.
+[187] A: Design and develop small, functional database applications using modern database design methods.
+      B: Create and analyse design models.
+[188] A: apply advanced knowledge of fundamental analysis techniques used in astronomy research.
+      B: Identify and explain the fundamental principles of exercise and sports science sub-disciplines (Scientist and Scholar)
+[189] A: Demonstrate understanding of the basic concepts that underlie modern database management systems.
+      B: Critically evaluate strategies to support health behaviour change initiatives and promote exercise adherence
+[190] A: Create and analyse design models.
+      B: Apply the rules of International Financial Reporting Standards (IFRS) and its Australian equivalents Australian Accounting Standards Board (AASB) to selected financial transactions and events, and prepare a complete set of financial statements based on both accrual and cash accounting.
+[191] A: Apply scientific knowledge and current research to interpret clinical scenarios and communicate key concepts in health and disease mechanisms. (Capability 4: Practitioner)
+      B: Effectively communicate scientific concepts related to alimentary health and disease and reflect on how scientific knowledge informs clinical practice. (Capability 4: Professional)
+[192] A: Describe the key stages of drug discovery, development and regulatory processes, and identify the challenges affecting equitable access to traditional and complementary medicine. (Citizen)
+      B: Effectively communicate scientific concepts related to alimentary health and disease and reflect on how scientific knowledge informs clinical practice. (Capability 4: Professional)
+[193] A: design and write code to implement a program description in a high-level programming language
+      B: design and write python code to apply statistical techniques to analysing and interpreting astronomical data sets.
+[194] A: Identify cybersecurity risks faced by business and relate the management of those risks to the enterprise governance.
+      B: Identify and explain the fundamental principles of exercise and sports science sub-disciplines (Scientist and Scholar)
+[195] A: describe the internal structure of our Sun and stars other than the Sun, and explain the key observational properties of different types of stars.
+      B: Explain how different physiological systems interact and influence each other in the context of exercise. (Scientist & Scholar)
+[196] A: use standard software engineering practices and tools to document, debug, test and manage their programs
+      B: adhere to standard software engineering practices, including documentation, unit testing and debugging
+[197] A: Apply marketing concepts, frameworks and theories to a range of real world scenarios.
+      B: Utilise relevant anatomical and lay terms in communication with a range of stakeholders (e.g., clients, families, carers and other health or exercise professionals). (Professional)
+[198] A: Critically evaluate the relation between cyber security and privacy in the context of a legal and regulatory framework.
+      B: Explain how companies are formed, differentiate between types of companies, and analyse and evaluate the role and obligations of directors.
+[199] A: Create simple materials and shaders that demonstrate an understanding of the fundamental building blocks of computer graphics, including textures, UVs and normals.
+      B: demonstrate an understanding of a range of instrumentation topics and how they are connect to astronomical discoveries.
+[200] A: Discuss and analyse management accounting issues and information.
+      B: Evaluate the role of Information Systems and Accounting Information Systems in supporting the business processes of an organisation

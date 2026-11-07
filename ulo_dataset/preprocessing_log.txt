@@ -5,5 +5,10 @@ Clean outcomes kept               : 205
 Pairs made (same_unit       ) : 50
 Pairs made (same_discipline ) : 50
 Pairs made (cross_discipline) : 50
-TOTAL pairs                       : 150
+Pairs made (v2_overlap_0.30+    ) : 74 of 74
+Pairs made (v2_overlap_0.20-0.30) : 70 of 197
+Pairs made (v2_overlap_0.10-0.20) : 70 of 1050
+Pairs made (v2_overlap_0.00-0.10) : 70 of 4198
+Pairs made (v2_overlap_none     ) : 66 of 15241
+TOTAL pairs                       : 500 (v1 150 random by type + v2 350 by word-overlap band)
 Pairs for you to rate by hand     : 20

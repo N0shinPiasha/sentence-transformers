@@ -1,0 +1,26 @@
+========================================================================
+1. STS-B test set (1379 pairs)
+  SBERT-NLI-base Spearman = 76.98  [95% CI 74.4, 79.2]  (cosines saved to 3 decimals; full-precision value 76.99)
+  random 150-pair subsets: mean 76.70, middle 95% [69.3, 82.9]
+  TF-IDF cosine baseline  = 65.89  [95% CI 62.1, 69.3]
+  gold scores rounded to whole points: 0: 185, 1: 189, 2: 242, 3: 284, 4: 323, 5: 156
+  share of pairs with gold >= 3.5: 34.7%
+
+========================================================================
+2. BIOSSES (100 pairs)
+  SBERT-NLI-base Spearman = 51.62  [95% CI 35.1, 65.7]
+  TF-IDF cosine baseline  = 77.57  [95% CI 67.5, 84.7]
+
+========================================================================
+3. Amazon ESCI - first 2,000 US test rows (earlier sample run)
+  distinct queries: 856  (median 1 products per query; the stream is ordered by product, so this is not a random sample)
+  distinct products: 766
+  label distribution (3=Exact .. 0=Irrelevant): 3: 831, 2: 493, 1: 36, 0: 640
+  pooled Spearman over these rows = 29.37  (full test set: 15.05)
+
+========================================================================
+4. SBERT vs TF-IDF on identical pairs (2,000-pair sample files)
+  QQP (random sample)                ROC-AUC  SBERT  80.57   TF-IDF  73.28   gap  +7.29
+  Financial PhraseBank (balanced)    ROC-AUC  SBERT  66.11   TF-IDF  55.88   gap +10.23
+  CUAD (balanced)                    ROC-AUC  SBERT  75.23   TF-IDF  74.88   gap  +0.35
+  Amazon ESCI (first rows)           Spearman SBERT  29.37   TF-IDF  43.49   gap -14.12
