@@ -2,6 +2,7 @@
 1. STS-B test set (1379 pairs)
   SBERT-NLI-base Spearman = 76.98  [95% CI 74.4, 79.2]  (cosines saved to 3 decimals; full-precision value 76.99)
   random 150-pair subsets: mean 76.70, middle 95% [69.3, 82.9]
+  random 500-pair subsets: mean 76.90, middle 95% [73.7, 79.9]
   TF-IDF cosine baseline  = 65.89  [95% CI 62.1, 69.3]
   gold scores rounded to whole points: 0: 185, 1: 189, 2: 242, 3: 284, 4: 323, 5: 156
   share of pairs with gold >= 3.5: 34.7%

@@ -65,9 +65,10 @@ say(f"1. STS-B test set ({len(sts)} pairs)")
 say(f"  SBERT-NLI-base Spearman = {rho(cos, gold):.2f}  [95% CI {lo:.1f}, {hi:.1f}]  "
     "(cosines saved to 3 decimals; full-precision value 76.99)")
 rng = np.random.default_rng(SEED)
-sub = [rho(cos[i], gold[i]) for i in (rng.choice(len(sts), 150, replace=False) for _ in range(10_000))]
-say(f"  random 150-pair subsets: mean {np.mean(sub):.2f}, middle 95% [{np.percentile(sub, 2.5):.1f}, "
-    f"{np.percentile(sub, 97.5):.1f}]")
+for size in (150, 500):                      # the sizes of the ULO dataset (v1 and v1+v2)
+    sub = [rho(cos[i], gold[i]) for i in (rng.choice(len(sts), size, replace=False) for _ in range(10_000))]
+    say(f"  random {size}-pair subsets: mean {np.mean(sub):.2f}, middle 95% [{np.percentile(sub, 2.5):.1f}, "
+        f"{np.percentile(sub, 97.5):.1f}]")
 tf = tfidf_cosine(sts["sentence1"], sts["sentence2"])
 lo, hi = boot_ci(tf, gold)
 say(f"  TF-IDF cosine baseline  = {rho(tf, gold):.2f}  [95% CI {lo:.1f}, {hi:.1f}]")

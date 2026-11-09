@@ -22,7 +22,7 @@ code is unchanged; the project adds the scripts and data listed below to:
 | BIOSSES (biomedical) | 100 pairs | Spearman x100 | 51.62 |
 | Financial PhraseBank | 2,259 sentences, 2.55M pairs | ROC-AUC x100 | 52.09 |
 | Amazon ESCI (product search) | 434,234 US test pairs | Spearman x100 | 15.05 |
-| **New: ULO dataset** | 500 pairs, LLM-judge labels | Spearman x100 | run `ulo_dataset/evaluate_ulo.py` |
+| **New: ULO dataset** | 500 pairs, LLM-judge labels | Spearman x100 | **77.05** vs. LLM labels (58.21 vs. the author's blind ratings, 50 pairs) |
 
 ## Repository map
 
@@ -32,17 +32,18 @@ code is unchanged; the project adds the scripts and data listed below to:
 | `run_existing_datasets.py` | First pass on 2,000-pair samples (kept for transparency, superseded) | `results/existing_datasets_results.csv`, `results/pred_*.csv` |
 | `run_full_datasets.py` | Full evaluation on the five existing datasets | `results/full_results.csv`, `results/full_log.txt` |
 | `extra_analysis.py` | Confidence intervals, TF-IDF baselines, sample diagnostics (no model needed) | `results/extra_analysis.txt` |
-| `robustness_checks.py` | CUAD multi-label and ESCI per-query (nDCG@10) checks | `results/robustness_*.txt` |
-| `train_sbert_nli.py` | Optional: trains SBERT from plain BERT with the paper's recipe (GPU) | `results/training_log.txt` |
+| `robustness_checks.py` | Optional follow-up: CUAD multi-label and ESCI per-query (nDCG@10) checks; not part of the reported results | `results/robustness_*.txt` |
+| `train_sbert_nli.py` | Optional: trains SBERT from plain BERT with the paper's recipe (GPU); not part of the reported results | `results/training_log.txt` |
 | `ulo_dataset/collect_ulo1.py` | Scrapes ULOs from unitguides.mq.edu.au (1 s delay between requests) | `ulos.csv` |
 | `ulo_dataset/make_pairs.py` | Cleans outcomes; samples 150 random pairs by type (v1) + 350 pairs by word-overlap band (v2), seed 42 | `ulos_clean.csv`, `pairs.csv`, `preprocessing_log.txt` |
 | `ulo_dataset/Prepare_LLM_batches.py` | Writes the fixed judge prompt and ten 50-pair batches | `judge_prompt.txt`, `batch_*.txt` |
-| `ulo_dataset/llm_labels.csv` | Final LLM judge labels for all 500 pairs (score 0-5 + reason) | |
-| `ulo_dataset/llm_labels_round1.csv` | First judge's labels for pairs 1-150 (used for judge-vs-judge agreement) | |
+| `ulo_dataset/llm_labels.csv` | Final labels for all 500 pairs (score 0-5 + reason): Google Gemini, Pro model | |
+| `ulo_dataset/llm_labels_claude.csv` | Second judge: Claude Opus 5.5 labels for the same 500 pairs (judge-vs-judge agreement) | |
+| `ulo_dataset/llm_labels_round1.csv` | Gemini's first-round labels for pairs 1-150, October 2026 (consistency check) | |
 | `ulo_dataset/rate_pairs.py`, `make_blind_sample.py` | Terminal tool for blind human ratings | `my_ratings.csv`, `my_ratings_blind.csv` |
-| `ulo_dataset/analyse_labels.py` | Merges labels, sanity checks, SBERT cosines | `ulo_dataset_labelled.csv`, `label_report.txt` |
+| `ulo_dataset/analyse_labels.py` | Merges labels, sanity checks, SBERT cosines (reuses saved cosines; `--recompute` re-encodes) | `ulo_dataset_labelled.csv`, `label_report.txt` |
 | `ulo_dataset/evaluate_ulo.py` | Agreement statistics, baselines, error analysis | `results/ulo_evaluation.txt`, `results/ulo_scores.csv` |
-| `report/` | LaTeX source of the final report and `make_figures.py` | `report/figures/` |
+| `report/make_figures.py` | Draws the report's ULO figure (the report itself is submitted separately) | `report/figures/` |
 
 Files from the proposal stage (500-pair STS-B subset): `results_comparison.md`, `test_sbert_gotfromfirstproposal.py`, `output.txt`, `comparison_output.png`.
 
@@ -60,7 +61,8 @@ python run_full_datasets.py esci         # 434k pairs: use a GPU (about 24 min o
 python extra_analysis.py                 # seconds, no model needed
 python robustness_checks.py cuad         # CPU is fine
 python robustness_checks.py esci         # GPU
-python ulo_dataset/evaluate_ulo.py       # seconds; add --models to re-encode with all baselines
+cd ulo_dataset && python analyse_labels.py && cd ..   # merges the labels; reuses saved SBERT cosines
+python ulo_dataset/evaluate_ulo.py       # about 2 min; add --models to re-encode with all baselines
 python report/make_figures.py
 ```
 
@@ -79,6 +81,15 @@ The scraped data (collected 2026-10-07) is saved in `ulos.csv`, so nothing needs
   for this assessment only; every row keeps its source URL and collection date.
 - LLM judge labels were produced with the fixed prompt in `ulo_dataset/judge_prompt.txt`, in batches of 50,
   blind to SBERT scores (which are computed afterwards by `analyse_labels.py`).
+- Which judge made which labels: the final labels in `llm_labels.csv` come from Google Gemini (Pro model, web app)
+  on 9 November 2026; each `batch_*.txt` file was pasted unchanged into Gemini and its CSV answer was pasted
+  into the file. `llm_labels_claude.csv` holds Claude Opus 5.5's labels for the same 500 pairs (November 2026,
+  the final labels before the Gemini run), kept as the second judge. `llm_labels_round1.csv` holds Gemini's
+  first-round labels for pairs 1-150 (October 2026, reported in the project update). Claude had seen 30 of those
+  first-round labels before labelling (`claude_seen_round1_ids.txt`), so agreement is also reported without them.
+- Human ratings: `my_ratings.csv` (20 pairs) was rated with an AI assistant's help on applying the rubric, and
+  Claude saw these ratings before labelling. `my_ratings_blind.csv` (50 pairs) was rated blind, without AI help,
+  before the Gemini labels were made; neither LLM judge saw it.
 
 ---
 

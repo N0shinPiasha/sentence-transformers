@@ -2,15 +2,17 @@
 Evaluate SBERT on the new ULO (Unit Learning Outcome) dataset and measure label quality.
 
 Inputs (all in ulo_dataset/):
-    ulo_dataset_labelled.csv   500 pairs with the LLM judge score (0-5) and SBERT cosine
-                               (made by analyse_labels.py)
-    ulos_clean.csv             205 cleaned outcomes (corpus used to fit TF-IDF)
-    llm_labels_round1.csv      the first judge's labels for pairs 1-150 (second-judge agreement)
-    my_ratings.csv             20 pairs rated by the author (first round)
-    my_ratings_blind.csv       optional second, fully blind round (made by make_blind_sample.py)
+    ulo_dataset_labelled.csv    500 pairs with the final LLM judge's score (0-5) and the SBERT cosine
+                                (made by analyse_labels.py from llm_labels.csv)
+    ulos_clean.csv              205 cleaned outcomes (corpus used to fit TF-IDF)
+    llm_labels_claude.csv       second LLM judge, all 500 pairs (judge-vs-judge agreement)
+    llm_labels_round1.csv       first-round labels for pairs 1-150, October 2026 (consistency check)
+    claude_seen_round1_ids.txt  pairs whose first-round labels the second judge had seen
+    my_ratings.csv              20 pairs rated by the author (first round)
+    my_ratings_blind.csv        50 pairs rated blind by the author (made by make_blind_sample.py)
 
 Run from the repository root:
-    python ulo_dataset/evaluate_ulo.py            # statistics only: any CPU, a few seconds
+    python ulo_dataset/evaluate_ulo.py            # statistics only: any CPU, about 2 minutes
     python ulo_dataset/evaluate_ulo.py --models   # also re-encodes the pairs with the paper's
                                                   # baselines (downloads about 2 GB of models)
 
@@ -67,6 +69,19 @@ def bootstrap_ci(x, y, stat=spearman100, n_boot=N_BOOT, seed=SEED):
 def fmt_ci(x, y):
     lo, hi = bootstrap_ci(x, y)
     return f"{spearman100(x, y):6.2f}  [95% CI {lo:5.1f}, {hi:5.1f}]"
+
+
+def paired_diff_ci(x, y1, y2, n_boot=N_BOOT, seed=SEED):
+    """95% bootstrap interval for spearman(x, y1) - spearman(x, y2), both on the same resampled pairs."""
+    x, y1, y2 = (np.asarray(v, float) for v in (x, y1, y2))
+    rng = np.random.default_rng(seed)
+    vals = []
+    for _ in range(n_boot):
+        i = rng.integers(0, len(x), len(x))
+        if min(np.ptp(x[i]), np.ptp(y1[i]), np.ptp(y2[i])) == 0:
+            continue
+        vals.append(spearman100(x[i], y1[i]) - spearman100(x[i], y2[i]))
+    return np.percentile(vals, [2.5, 97.5])
 
 
 def lead_verb(text):
@@ -186,10 +201,28 @@ def main():
         g = d[d["pair_type"] == t]
         say(f"    {t:<17} n={len(g):3d}  LLM={g['llm_score'].mean():.2f}  cosine={g['sbert_cosine'].mean():.3f}")
 
+    # other LLM labels for the same pairs, matched by pair_id (used in sections 2 and 2b)
+    def load_labels(fname, col):
+        """Read a pasted label file (tolerates repeated headers); return pair_id and one score column."""
+        path = HERE / fname
+        if not path.exists():
+            return None
+        lab = pd.read_csv(path, dtype=str, on_bad_lines="skip")
+        lab = lab[lab["pair_id"].str.strip() != "pair_id"]           # pasted batches repeat the header
+        lab["pair_id"] = pd.to_numeric(lab["pair_id"], errors="coerce")
+        lab[col] = pd.to_numeric(lab["llm_score"], errors="coerce")
+        lab = lab.dropna(subset=["pair_id", col]).drop_duplicates("pair_id", keep="last")
+        return lab[["pair_id", col]].astype({"pair_id": int})
+
+    second = load_labels("llm_labels_claude.csv", "second_judge")     # a different LLM, all pairs
+    october = load_labels("llm_labels_round1.csv", "october")         # first round, pairs 1-150
+    seen_path = HERE / "claude_seen_round1_ids.txt"
+    seen = ({int(line) for line in seen_path.read_text().splitlines() if line.strip().isdigit()}
+            if seen_path.exists() else set())
+
     # ---------- 2. human vs LLM agreement
     say("\n" + "=" * 72)
-    say("2. HUMAN vs LLM AGREEMENT (measure of label quality)")
-    human_sets = {}
+    say("2. HUMAN vs LLM AGREEMENT (measure of label quality; LLM = final judge)")
     for fname, label in [("my_ratings.csv", "Round 1 (my_ratings.csv)"),
                          ("my_ratings_blind.csv", "Round 2 blind (my_ratings_blind.csv)")]:
         path = HERE / fname
@@ -203,26 +236,50 @@ def main():
         if len(h) < 5:
             say(f"  {label}: fewer than 5 ratings, skipped")
             continue
-        human_sets[label] = h
         agreement_block(label, h["my_score"], h["llm_score"])
         say(f"    pair types rated        = {h['pair_type'].value_counts().to_dict()}")
-        say(f"    SBERT vs human (same pairs): Spearman = {spearman100(h['sbert_cosine'], h['my_score']):.2f}")
-        say(f"    SBERT vs LLM   (same pairs): Spearman = {spearman100(h['sbert_cosine'], h['llm_score']):.2f}")
+        say(f"    SBERT vs human (same pairs): Spearman = {fmt_ci(h['sbert_cosine'], h['my_score'])}")
+        say(f"    SBERT vs LLM   (same pairs): Spearman = {fmt_ci(h['sbert_cosine'], h['llm_score'])}")
+        gap = spearman100(h["sbert_cosine"], h["llm_score"]) - spearman100(h["sbert_cosine"], h["my_score"])
+        lo, hi = paired_diff_ci(h["sbert_cosine"], h["llm_score"], h["my_score"])
+        say(f"    difference (LLM - human)   : {gap:+6.2f}  [95% CI {lo:5.1f}, {hi:5.1f}]  (paired bootstrap)")
+        for other, col, name in [(second, "second_judge", "second judge"), (october, "october", "October labels")]:
+            if other is None:
+                continue
+            m = h.merge(other, on="pair_id")
+            if len(m) >= 5:
+                say(f"    vs {name} ({len(m)} of these pairs): human Spearman = "
+                    f"{spearman100(m['my_score'], m[col]) / 100:.2f};  SBERT Spearman = "
+                    f"{spearman100(m['sbert_cosine'], m[col]):.2f}")
 
-    # ---------- 2b. agreement between two LLM judges on the shared pairs
-    r1_path = HERE / "llm_labels_round1.csv"
-    if r1_path.exists():
-        r1 = pd.read_csv(r1_path, dtype=str)
-        r1 = r1[r1["pair_id"].str.strip() != "pair_id"]               # pasted batches repeat the header
-        r1["pair_id"] = pd.to_numeric(r1["pair_id"], errors="coerce")
-        r1["llm_score"] = pd.to_numeric(r1["llm_score"], errors="coerce")
-        r1 = r1.dropna(subset=["pair_id", "llm_score"]).drop_duplicates("pair_id", keep="last")
-        both = d[["pair_id", "text_a", "text_b", "llm_score"]].merge(
-            r1[["pair_id", "llm_score"]].rename(columns={"llm_score": "first_judge"}), on="pair_id")
+    # ---------- 2b. agreement between LLM judges on the shared pairs
+    say("\n" + "=" * 72)
+    say("2b. AGREEMENT BETWEEN LLM JUDGES (pairs labelled by both)")
+    if second is not None:
+        both = d[["pair_id", "llm_score", "sbert_cosine"]].merge(second, on="pair_id")
         if len(both) >= 5:
-            say("\n" + "=" * 72)
-            say("2b. AGREEMENT BETWEEN THE TWO LLM JUDGES (pairs labelled by both)")
-            agreement_block("Final judge vs first judge", both["llm_score"], both["first_judge"], "final", "first")
+            agreement_block("Final judge vs second judge (llm_labels_claude.csv)",
+                            both["llm_score"], both["second_judge"], "final", "second")
+            say(f"    SBERT vs second judge (same pairs): Spearman = {fmt_ci(both['sbert_cosine'], both['second_judge'])}")
+            say(f"    SBERT vs final judge  (same pairs): Spearman = {fmt_ci(both['sbert_cosine'], both['llm_score'])}")
+            if seen:
+                unseen = both[~both["pair_id"].isin(seen)]
+                agreement_block(f"Same, excluding the {len(seen)} pairs whose first-round labels the second judge had seen",
+                                unseen["llm_score"], unseen["second_judge"], "final", "second")
+    if october is not None:
+        rnd = d[["pair_id", "llm_score", "sbert_cosine"]].merge(october, on="pair_id")
+        if len(rnd) >= 5:
+            agreement_block("Final judge vs first-round labels (llm_labels_round1.csv, October)",
+                            rnd["llm_score"], rnd["october"], "final", "October")
+            say(f"    SBERT vs first-round labels (same pairs): Spearman = {fmt_ci(rnd['sbert_cosine'], rnd['october'])}")
+            say(f"    SBERT vs final judge        (same pairs): Spearman = {fmt_ci(rnd['sbert_cosine'], rnd['llm_score'])}")
+            if second is not None:
+                rnd = rnd.merge(second, on="pair_id")
+                agreement_block("Second judge vs first-round labels", rnd["second_judge"], rnd["october"], "second", "October")
+                if seen:
+                    unseen = rnd[~rnd["pair_id"].isin(seen)]
+                    agreement_block(f"Same, excluding the {len(seen)} pairs the second judge had seen",
+                                    unseen["second_judge"], unseen["october"], "second", "October")
 
     # ---------- 3. SBERT and lexical baselines vs LLM labels
     say("\n" + "=" * 72)
@@ -273,6 +330,23 @@ def main():
         f"(stratified permutation p = {p:.3f})")
     llm_gap = (d.loc[d["same_verb"], "llm_score"].mean() - d.loc[~d["same_verb"], "llm_score"].mean())
     say(f"  (for reference: mean LLM score, shared minus not shared = {llm_gap:+.2f})")
+
+    # ---------- 4b. boilerplate capability tags, e.g. "(Scientist and Scholar)"
+    tag = re.compile(r"\((?:Capability \d+: )?(?:Scientist|Professional|Practitioner|Citizen|Exercise Science|Engaged)[^)]*\)\s*$")
+    d["tag_a"] = d["text_a"].str.contains(tag)
+    d["tag_b"] = d["text_b"].str.contains(tag)
+    both_tagged = d["tag_a"] & d["tag_b"]
+    if both_tagged.any() and (~both_tagged).any():
+        obs = d.loc[both_tagged, "resid"].mean() - d.loc[~both_tagged, "resid"].mean()
+        perm = []
+        for _ in range(N_BOOT):
+            flag = d.groupby("llm_score")["tag_a"].transform(lambda s: rng.permutation((d.loc[s.index, "tag_a"] & d.loc[s.index, "tag_b"]).values))
+            perm.append(d.loc[flag, "resid"].mean() - d.loc[~flag, "resid"].mean())
+        p = (np.sum(np.abs(perm) >= abs(obs)) + 1) / (len(perm) + 1)
+        n_tagged = len(set(d.loc[d["tag_a"], "text_a"]) | set(d.loc[d["tag_b"], "text_b"]))
+        say("\n  Capability tags such as '(Scientist and Scholar)' at the end of an outcome:")
+        say(f"  distinct tagged outcomes: {n_tagged}; pairs where both outcomes are tagged: {int(both_tagged.sum())}")
+        say(f"  extra SBERT cosine when both are tagged, at equal LLM score: {obs:+.3f}  (stratified permutation p = {p:.3f})")
 
     # ---------- 5. largest disagreements (for error analysis)
     say("\n" + "=" * 72)

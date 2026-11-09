@@ -1,12 +1,14 @@
 1. LLM labels: 500 / 500 pairs labelled
-   Score distribution: 0: 185, 1: 103, 2: 95, 3: 96, 4: 18, 5: 3
+   Score distribution: 0: 209, 1: 58, 2: 80, 3: 110, 4: 38, 5: 5
 
 2. Mean LLM score by pair type (expect same_unit > same_discipline > cross):
-   same_unit         2.54
-   same_discipline   1.72
-   cross_discipline  0.36
+   same_unit         2.74
+   same_discipline   1.88
+   cross_discipline  0.38
 
-3. You vs LLM on 20 blind pairs: Spearman = 0.59, mean difference = 1.15 points, exact match = 25%
+3. You vs LLM, Round 1, 20 pairs: Spearman = 0.69, mean difference = 1.25 points, exact match = 20%
 
-4. PREVIEW - SBERT vs LLM labels on 500 ULO pairs: Spearman = 76.80
+3. You vs LLM, Round 2 (blind), 50 pairs: Spearman = 0.64, mean difference = 0.94 points, exact match = 40%
+
+4. PREVIEW - SBERT vs LLM labels on 500 ULO pairs: Spearman = 77.05 (saved cosines)
    (for comparison, SBERT on STS-B = 76.99)

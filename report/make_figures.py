@@ -52,14 +52,15 @@ ks = np.arange(6)
 a1.bar(ks - 0.175, [sts_pct.get(k, 0) * 100 for k in ks], width=0.33, color=BLUE, linewidth=0, zorder=3)
 a1.bar(ks + 0.175, [ulo_pct.get(k, 0) * 100 for k in ks], width=0.33, color=ORANGE, linewidth=0, zorder=3)
 a1.set_xlim(-0.6, 5.6)
-a1.set_ylim(0, 40)
+a1.set_ylim(0, 46)
 a1.set_xticks(range(6))
 a1.set_xlabel("Similarity score (0 = unrelated, 5 = equivalent)")
 a1.set_ylabel("Share of pairs (%)")
 a1.set_title("(a) Label distribution", loc="left", color=TEXT)
-a1.text(4.75, 25.0, "ULO: one pair\nat 4, none at 5", fontsize=6.5, color=TEXT2, ha="center", va="bottom")
+n_top = int((ulo["llm_score"] >= 4).sum())
+a1.text(4.75, 25.0, f"ULO: {n_top} pairs\nat 4 or 5", fontsize=6.5, color=TEXT2, ha="center", va="bottom")
 a1.legend(handles=[Rectangle((0, 0), 1, 1, color=BLUE), Rectangle((0, 0), 1, 1, color=ORANGE)],
-          labels=[f"STS-B test, human ({len(sts):,} pairs)", f"ULO, LLM judge ({len(ulo)} pairs)"],
+          labels=[f"STS-B test, human ({len(sts):,})", f"ULO, LLM judge ({len(ulo)})"],
           frameon=False, loc="upper right", handlelength=1, borderaxespad=0)
 style(a1)
 
@@ -74,13 +75,13 @@ for key, label, color, off in types:
 for k, med in ulo.groupby("llm_score")["sbert_cosine"].median().items():
     a2.plot([k - 0.36, k + 0.36], [med, med], color=TEXT2, linewidth=1.0, zorder=2)
 rho = spearmanr(ulo["sbert_cosine"], ulo["llm_score"]).correlation * 100
-a2.set_xticks(range(5))
-a2.set_xlim(-0.5, 4.5)
+a2.set_xticks(range(6))
+a2.set_xlim(-0.5, 5.5)
 a2.set_ylim(0.15, 1.0)
 a2.set_xlabel("LLM judge score")
 a2.set_ylabel("SBERT cosine similarity")
 a2.set_title(f"(b) SBERT vs LLM labels on ULO pairs (Spearman {rho:.1f}; line = median)", loc="left", color=TEXT)
-a2.legend(frameon=False, loc="upper left", handletextpad=0.2, borderaxespad=0, markerscale=1.2)
+a2.legend(frameon=False, loc="lower right", handletextpad=0.2, borderaxespad=0, markerscale=1.2)
 style(a2)
 
 fig.savefig(OUT / "ulo_labels_and_scores.pdf", bbox_inches="tight", pad_inches=0.02)
