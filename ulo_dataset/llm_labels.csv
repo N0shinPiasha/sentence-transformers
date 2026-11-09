@@ -1,501 +1,510 @@
 pair_id,llm_score,llm_reason
-1,0,Exercise instruction versus academic referencing; no shared skill or topic
-2,3,Both evaluate statistical inference methods but likelihood and Bayesian paradigms differ
-3,1,Neuroscience of brain structures versus health behaviour change models; only health in common
-4,3,Same game design theory; analysing existing games versus producing a game
-5,3,Same game development topic; theoretical knowledge versus practical prototyping
-6,0,Astronomy teamwork versus business information systems; unrelated
-7,1,Science communication versus literature searching; only generic scholarly skills shared
-8,2,Both concern security; technical concepts versus business risk governance
-9,0,Body system assessment versus preparing data for statistics; unrelated
-10,1,Intercultural teamwork versus career reflection; only generic professional skills
-11,0,Programming constructs versus stellar dynamics; unrelated
-12,1,Marketing analytics versus financial reporting regulation; only business in common
-13,2,Both human physiology; nervous system organisation versus cell function in exercise
-14,1,Cybersecurity governance versus management accounting; only business management in common
-15,3,Same marketing communications topic; problem solving versus developing a plan
-16,3,Both health and disease mechanisms; explaining causes versus applying to clinical scenarios
-17,0,Commercial law versus communicating clinical anatomy; unrelated
-18,1,Python for lab problems versus communicating physics; different skills in physics
-19,1,Pharmacology communication versus functional anatomy for training; only health science shared
-20,1,Probability theory versus astrophysics computation; only quantitative methods shared
-21,3,Same foundation mathematics; communicating concepts versus solving algebra and calculus problems
-22,0,Excel management accounting versus finding scientific literature; unrelated
-23,1,Building databases versus data privacy regulation; only data in common
-24,2,Both interpret business data; market research versus financial statement analysis
-25,3,Both stellar systems in galaxies; stellar populations versus stellar dynamics
-26,3,Same persuasion topic; evaluating theories versus applying rapport strategies
-27,1,Marketing communications terms versus corporate law; only business in common
-28,1,Research data programming versus importing 3D models; only software use shared
-29,0,Academic ethics versus galaxy formation theory; unrelated
-30,4,Same marketing concepts and theories; B adds applying them to real scenarios
-31,2,Both astrophysics; stellar nucleosynthesis versus numerical problem solving
-32,0,Stellar structure equations versus surface anatomy; unrelated
-33,2,Both accounting; professional environment versus decision making
-34,2,Both corporate reporting; sustainability reporting versus equity and debt accounting
-35,3,Same cyber security topic; personal hygiene practice versus legal and privacy analysis
-36,2,Both anatomy; alimentary system versus musculoskeletal surface landmarks
-37,3,Same resistance training safety topic; instructing exercises versus contraindications
-38,1,Pharmacology versus resting physiology; only human biology in common
-39,1,Alimentary health communication versus exercise science principles; general health link only
-40,0,Oral presentation skills versus anatomical structures; unrelated
-41,1,Financial reporting regulation versus business risk controls; only business accounting context
-42,3,Same cyber security risk topic; personal versus enterprise context
-43,2,Both musculoskeletal anatomy; surface identification versus joint function in movement
-44,3,Same foundation mathematics; calculus calculations versus mathematical modelling
-45,3,Both describe physiological function; alimentary system versus physiological systems at rest
-46,0,Mathematical conjectures versus financial reporting regulation; unrelated
-47,1,Marketing communications plan versus company law; only business in common
-48,0,Marketing problem solving versus clinical scenario interpretation; unrelated
-49,1,Study skills in clinical science versus exercise science terminology; general foundation link
-50,0,Learning engagement versus health behaviour change strategies; unrelated
-51,0,Corporate insolvency versus personal career reflection; unrelated
-52,0,Python lab programming versus functional anatomy for training; unrelated
-53,3,Same statistical inference topic; principles in general versus using Bayesian methods
-54,2,Both marketing analysis; problem solving versus analytics with technology tools
-55,0,Argument communication versus clinical imaging principles; unrelated
-56,0,Business risk controls versus communicating clinical anatomy; unrelated
-57,1,Communicating physics versus algebra and calculus problem solving; only foundation science shared
-58,0,Customer value versus medical terminology for pathology; unrelated
-59,0,Importing 3D models versus sustainability reporting; unrelated
-60,0,Investment and financing versus alimentary health communication; unrelated
-61,0,Comparing numerical methods versus project planning; nothing meaningful shared
-62,3,Same molecular genetics topic; replication and expression processes versus genetic stability mechanisms
-63,0,Cybersecurity risk versus interpersonal persuasion strategies; unrelated
-64,0,Galaxy formation theory versus marketing research; unrelated
-65,0,Astronomical instrumentation versus mathematical conjectures; unrelated
-66,3,Same pharmacology concepts; explaining drug effects versus communicating them
-67,2,Both apply data analysis techniques; big data in general versus astronomical data in python
-68,0,Cosmological models versus genetic stability; unrelated
-69,3,Same foundation mathematics; calculus calculations versus communicating concepts
-70,0,3D technical art versus physiological measurement; unrelated
-71,1,Nervous system organisation versus measuring exercise physiology data; only physiology shared
-72,0,Stellar structure versus marketing analytics; unrelated
-73,1,Python lab programming versus testing mathematical conjectures; only quantitative work shared
-74,2,Both about the accounting profession context; ethics and dilemmas versus describing its environment
-75,0,Importing 3D models versus equity and debt accounting; unrelated
-76,0,Software engineering practice versus market research design; unrelated
-77,0,Importing 3D models versus marketing research; unrelated
-78,0,Game prototyping versus cyber security law; unrelated
-79,0,Software engineering practices versus general learning engagement; unrelated
-80,0,Cyber security and privacy law versus marketing communications terms; unrelated
-81,0,Stellar pulsations versus workshop problem solving; unrelated
-82,2,Both astrophysics; observational methods versus stellar structure equations
-83,0,Stellar evolution versus communicating mathematics; unrelated
-84,1,Customer value tools versus business law; only business in common
-85,0,SQL programming versus project planning; unrelated
-86,0,Shareholder law versus nervous system; unrelated
-87,0,Stellar pulsations versus marketing communications; unrelated
-88,3,Same exercise and sports science knowledge; explaining principles versus communicating it
-89,0,Astronomical observation versus communicating accounting treatment; unrelated
-90,0,Astronomical observation versus consumer behaviour; unrelated
-91,0,Radiative transfer versus management accounting; unrelated
-92,1,Database tools versus algorithm development; only computing in common
-93,1,Muscle roles in movement versus health behaviour change; only exercise and health shared
-94,2,Both analyse business information; market research versus management accounting
-95,3,Same skill of applying accounting techniques; management accounting versus financial reporting standards
-96,0,Galaxy formation versus health behaviour change; unrelated
-97,0,Software engineering culture versus Excel accounting; unrelated
-98,3,Same academic information literacy topic; finding literature versus referencing it
-99,1,Resistance program design versus anatomical knowledge; only exercise science shared
-100,2,Both model astrophysical environments; radiative transfer problems versus python computation
-101,3,Same marketing technology topic; explaining its role versus analysing practice with tools
-102,0,Big data concepts versus astronomy teamwork; unrelated
-103,1,Statistical software analysis versus communicating mathematics; only quantitative work shared
-104,1,Accounting profession environment versus contract law; only business environment shared
-105,2,Both statistical methods; Bayesian inference versus python analysis of astronomical data
-106,2,Both stellar astrophysics; stellar evolution theory versus observational experiments
-107,2,Both 3D graphics for games; shaders and materials versus importing models
-108,1,Database applications versus game design theory; only computing in common
-109,0,Programming fundamentals versus cybersecurity governance; unrelated
-110,1,Consumer behaviour versus company law; only business in common
-111,1,Cell signalling versus measuring exercise physiology data; only physiology shared
-112,2,Both concern the nervous system; its organisation versus drug actions on it
-113,0,Implementing programs versus general learning engagement; unrelated
-114,0,Customer data types versus finding scientific literature; unrelated
-115,1,Study techniques versus communicating clinical anatomy; only clinical science study context
-116,0,Bayesian inference versus health behaviour change; unrelated
-117,3,Same corporate law topic; company formation and directors versus insolvency
-118,0,Database concepts versus algebra and calculus reasoning; unrelated
-119,1,Astronomical observation versus exercise data analysis; only data interpretation shared
-120,2,Both concern cyber security; technical concepts versus cybercrime and society
-121,2,Both cosmology and galaxies; cosmological metrics versus galaxy formation theory
-122,0,Game design versus human movement mechanics; unrelated
-123,0,Likelihood inference versus communicating physics; unrelated
-124,0,Learning engagement versus sustainability reporting; unrelated
-125,1,Pharmacology versus surface anatomy; only health science shared
-126,0,Academic ethics versus stellar populations; unrelated
-127,0,Mathematical modelling versus clinical study techniques; unrelated
-128,3,Same management accounting topic; Excel task skills versus conceptual problem solving
-129,2,Both accounting; processing information versus analysing financial statements
-130,2,Both astrophysics; stellar evolution physics versus computational modelling
-131,0,Software engineering practice versus human physiology; unrelated
-132,0,Writing programs versus academic ethics; unrelated
-133,2,Both accounting; governance and accountability role versus processing information
-134,1,Marketing communications plan versus accounting regulation; only business in common
-135,0,Astronomical data analysis versus cell physiology; unrelated
-136,1,Testing models against data versus clinical interpretation; only evidence use shared
-137,1,Investment decisions versus financial reporting regulation; only finance context shared
-138,1,Marketing research versus accounting regulation; only business in common
-139,1,Big data concepts versus personal cyber hygiene; only computing in common
-140,0,Research ethics versus digital marketing value; unrelated
-141,0,Game prototyping versus self-reflection; unrelated
-142,2,Both astrophysics problem solving; radiative transfer versus stellar dynamics
-143,0,Market research versus nervous system pharmacology; unrelated
-144,3,Same skill of applying accounting standards; full financial statements versus equity and debt
-145,3,Same business law topic; legal system and business organisations versus company formation
-146,1,Business risk controls versus corporate insolvency; only business regulation shared
-147,1,Corporate law issues versus investment and financing; only corporate context shared
-148,2,Both concern security; technical computing concepts versus personal cyber hygiene
-149,2,Both self-management skills; managing learning challenges versus reflecting on career
-150,2,Both astronomy; stellar structure equations versus general research analysis techniques
-151,1,Communicating pharmacology versus cell signalling; only biomedical science shared
-152,0,Galaxy morphology versus human motion mechanics; unrelated
-153,0,Cosmological models versus cell physiology; unrelated
-154,3,Same management accounting topic; costing and budgeting techniques versus Excel tasks
-155,0,Software design models versus statistical model testing; different meanings of model
-156,2,Both accounting; management accounting issues versus information system development and ethics
-157,0,Bayesian inference versus management accounting techniques; unrelated
-158,1,Database applications versus game design theory; only computing in common
-159,4,Same foundation mathematics communication; B adds creating and interpreting models
-160,0,Map-reduce for big data versus exercise programming rationale; unrelated
-161,2,Both anatomy and function; brain structures versus major body systems
-162,0,Astronomy research topics versus marketing research; unrelated
-163,2,Both human biology for exercise; anatomical structures versus cell physiology
-164,2,Both professional communication; accounting recommendations versus general clinical settings
-165,0,Software design models versus customer value tools; unrelated
-166,2,Both communicate biomedical mechanisms; clinical disease scenarios versus drug actions
-167,1,Both apply theory to analyse cases; game design versus consumer behaviour
-168,3,Same marketing concepts and frameworks; applying them versus defining communication terms
-169,2,Both science communication; astronomy research results versus clinical disease concepts
-170,3,Same marketing scenario solutions; applying concepts versus communicating solutions collaboratively
-171,0,Astronomical observation versus clinical anatomy and imaging; unrelated
-172,1,Clinical anatomy versus exercise data analysis; only health science shared
-173,3,Same musculoskeletal anatomy; clinical analysis versus surface identification
-174,1,Statistical model testing versus behaviour change theory; only applying models shared
-175,3,Same accounting for decision making; evaluating traditional aspects versus applying techniques
-176,0,Stellar populations versus clinical scenarios; unrelated
-177,3,Same customer and market research tools; using them versus evaluating them
-178,2,Both computational methods; machine learning on data versus astrophysical numerical codes
-179,0,Customer value versus exercise science research design; unrelated
-180,3,Same human physiology topic; systems at rest versus cells in exercise
-181,3,Same statistical inference topic; principles in general versus likelihood methods
-182,3,Same skill of communicating results orally and in writing; astronomy versus exercise science
-183,3,Same game development topic; theoretical knowledge versus producing a game
-184,1,Marketing analytics versus financing needs; only business in common
-185,2,Both human body systems for exercise; physiological interaction versus anatomy
-186,0,Python lab programming versus customer value tools; unrelated
-187,2,Both software design; database application design versus general design models
-188,0,Astronomy analysis techniques versus exercise science principles; unrelated
-189,0,Database concepts versus health behaviour change; unrelated
-190,0,Software design models versus financial reporting standards; unrelated
-191,4,Same skill of communicating disease science for clinical practice; B limited to alimentary health
-192,1,Drug development and access versus alimentary health communication; only biomedical context
-193,3,Same skill of designing and writing code; general programs versus astronomical statistics
-194,0,Cybersecurity risk versus exercise science principles; unrelated
-195,0,Stellar structure versus exercise physiology; unrelated
-196,5,Equivalent: both apply standard software engineering practice for documenting testing and debugging
-197,0,Marketing concepts versus anatomical terminology with clients; unrelated
-198,1,Cyber security law versus company law; only legal regulation shared
-199,0,Computer graphics shaders versus astronomical instrumentation; unrelated
-200,2,Both accounting information; management accounting analysis versus information systems
-201,3,Same 3D model and animation topic; creating and rigging versus importing into an engine
-202,0,Research data programming versus communicating game design; unrelated
-203,3,Same skill of interpreting exercise science data; measuring versus presenting it
-204,1,Marketing fundamentals versus management accounting; only business in common
-205,3,Same marketing communications topic; defining concepts versus developing a plan
-206,1,Corporate law versus accounting system development; only business in common
-207,1,Software design models versus 3D graphics models; only computing in common
-208,0,Legal system versus nervous system; unrelated
-209,0,Consumer behaviour versus cell physiology; unrelated
-210,3,Same programming topic; designing algorithms versus implementing them
-211,3,Same astrophysics research topic; connecting key topics versus research skills
-212,1,Machine learning versus exercise science research design; only research methods shared
-213,1,Big data concepts versus data privacy regulation; only data in common
-214,1,Pharmacology versus health behaviour change; only health in common
-215,2,Both teamwork; software engineering team culture versus intercultural teamwork
-216,2,Both exercise physiology; analysing data versus explaining system interactions
-217,2,Both communicate research results; astronomy versus market research recommendations
-218,4,Same skill of developing algorithms by problem solving; B at a more advanced level
-219,0,Project planning versus human movement mechanics; unrelated
-220,1,Workshop problem solving versus astrophysical numerical codes; only problem solving shared
-221,0,Astronomy analysis techniques versus marketing research; unrelated
-222,3,Same stellar astrophysics topic; stellar structure versus nucleosynthesis
-223,0,Big data concepts versus astronomy topics; unrelated
-224,4,Same physiological system interactions; at rest versus during exercise
-225,0,Statistical inference versus galaxy morphology; unrelated
-226,1,Exercise data analysis versus anatomical structures; only exercise science shared
-227,4,Same foundations of exercise and sports science; principles versus key terminology
-228,5,Equivalent: identical foundational learning skills outcome
-229,0,Algorithm design versus audience persuasion; unrelated
-230,0,Persuasion theory versus resistance training instruction; unrelated
-231,2,Both astronomy; instrumentation knowledge versus team problem solving
-232,1,Marketing research versus accounting information systems; only business in common
-233,0,Cell signalling versus research design; unrelated
-234,3,Same exercise physiology topic; explaining system interactions versus measuring data
-235,0,Astronomical observation versus molecular cell biology; unrelated
-236,2,Both digital marketing; customer data collection versus value of digital marketing
-237,1,Software design models versus communicating game design; only design in common
-238,0,Software development tools versus management accounting; unrelated
-239,2,Both research practice; managing a project versus astronomy analysis techniques
-240,0,Disease mechanisms versus data analysis software; unrelated
-241,2,Both accounting; traditional decision making versus information systems
-242,0,Astronomical observation versus pharmacology; unrelated
-243,3,Same health behaviour change topic; applying models versus evaluating strategies
-244,3,Same anatomical terminology topic; defining terms versus using them with clients
-245,3,Same skill of applying anatomy; strength training versus clinical presentations
-246,1,Management accounting versus corporate law; only business in common
-247,0,Academic ethics versus alimentary health communication; unrelated
-248,0,Learning engagement versus medical terminology for pathology; unrelated
-249,1,Project plan versus marketing communications plan; only planning in common
-250,0,Consumer behaviour versus clinical anatomy communication; unrelated
-251,3,Same biochemistry topic; describing cell structure versus applying it to biological processes
-252,1,Customer data versus persuasion theory; only marketing in common
-253,1,Pathology terminology versus digestive physiology; only biomedical science shared
-254,0,Market research versus health behaviour change; unrelated
-255,2,Both astronomy; instrumentation knowledge versus research skills
-256,3,Same galaxy structure and formation topic; galaxies in general versus the Milky Way
-257,1,Evaluating scientific outcomes versus referencing; only scholarly practice shared
-258,1,Resting physiology versus surface anatomy; only human body shared
-259,0,SQL programming versus pharmacology communication; unrelated
-260,0,Game analysis versus biochemistry; unrelated
-261,2,Both include active engagement in learning; A adds academic ethics
-262,0,Software design models versus financial statement analysis; unrelated
-263,0,Comparing computational methods versus clinical imaging; unrelated
-264,1,Management accounting versus commercial law; only business in common
-265,0,Statistical inference versus exercise science; only the words fundamental principles shared
-266,0,Research document preparation versus health behaviour change; unrelated
-267,1,Exercise science principles versus training contraindications; only exercise science shared
-268,3,Same game design topic; disciplinary knowledge versus communicating decisions
-269,0,Astrophysical gas dynamics versus referencing; unrelated
-270,3,Same company law topic on directors obligations; insolvency versus company formation
-271,0,Stellar dynamics versus human physiology; unrelated
-272,0,Programming concepts versus marketing fundamentals; unrelated
-273,3,Same anatomy topic; describing structures versus applying to clinical presentations
-274,2,Both evaluate marketing data and tools; research techniques versus sustainability
-275,0,Self-reflection versus accounting system development; unrelated
-276,2,Both communicate findings in writing and presentations; astronomy research versus accounting advice
-277,2,Both marketing data and technology; generating insights versus sustainability
-278,3,Same marketing communications topic; persuasion theory versus developing a plan
-279,1,Accounting systems ethics versus company law; only business in common
-280,4,Same professional communication skill in individual and group settings; B names clinical anatomy content
-281,0,Astronomy teamwork versus drug safety; unrelated
-282,3,Same astronomy research methods; analysis techniques versus solving computational problems
-283,0,Research project management versus exercise science terminology; unrelated
-284,3,Same stellar evolution topic; general processes versus the role of pulsations
-285,0,Research project management versus legal system; unrelated
-286,3,Same astronomy research techniques; understanding them versus applying them
-287,1,Customer value versus business risk controls; only business in common
-288,0,Programming concepts versus functional anatomy; unrelated
-289,3,Same project planning skill; empirical research project versus generic project plan
-290,0,Corporate insolvency versus clinical anatomy; unrelated
-291,0,Galaxy morphology versus data analysis software; only wording shared
-292,0,Accounting techniques versus professional communication; unrelated
-293,2,Both stellar evolution; stellar populations versus pulsations
-294,1,Anatomical terms with clients versus behaviour change theory; only health practice shared
-295,0,Data privacy regulation versus exercise science communication; unrelated
-296,0,Communicating mathematics versus exercise science terminology; unrelated
-297,3,Same foundational marketing concepts and frameworks; B limited to marketing communications
-298,2,Both physiology; analysing exercise data versus describing systems at rest
-299,0,Astrophysics research versus resistance program design; unrelated
-300,0,Marketing concepts versus exercise science terminology; unrelated
-301,0,Marketing technology versus training contraindications; unrelated
-302,0,Comparing computational methods versus marketing communications plan; unrelated
-303,0,Calculus versus referencing; unrelated
-304,2,Both about types of data; customer data collection versus organising data for statistics
-305,0,Research project management versus pharmacology communication; unrelated
-306,3,Same big data topic; map-reduce versus high-dimensional data techniques
-307,1,Accounting ethics versus investment decisions; only business accounting context
-308,3,Same resting physiology topic; describing systems versus measuring data
-309,5,Equivalent: both identify musculoskeletal and vascular structures through surface anatomy
-310,4,Same skill of using customer data and tools to understand customers and drive strategy
-311,0,Software engineering practice versus human movement mechanics; unrelated
-312,2,Both use reflective practice; career development versus pharmacology misconceptions
-313,3,Same accounting for business decisions; evaluating traditions versus applying techniques
-314,1,Exercise science terminology versus functional anatomy for training; only exercise science shared
-315,4,Same skill of preparing financial statements under standards; A adds advice on issues
-316,0,Computer graphics shaders versus python for lab problems; unrelated
-317,0,Galaxy morphology versus resistance training instruction; unrelated
-318,4,Same regulatory environment of accounting; B adds the conceptual framework and theories
-319,1,Software design models versus mathematical models; only modelling in general shared
-320,3,Same corporate insolvency regulation; recognising features versus critical analysis
-321,0,Accounting information systems versus professional communication; unrelated
-322,1,Finding literature versus analysing data with software; only research skills shared
-323,1,Exercise science principles versus research design appraisal; only exercise science shared
-324,0,Game design versus Milky Way structure; unrelated
-325,0,Astronomical observation versus foundation mathematical models; unrelated
-326,2,Both accounting information systems; processing with software versus evaluating their role
-327,0,Astronomical observation versus accounting system development; unrelated
-328,0,Statistical estimation versus management accounting techniques; unrelated
-329,0,Communicating astronomy research versus cell signalling; unrelated
-330,4,Same skill of applying consumer behaviour theory to real consumption; B adds ethics
-331,1,Nervous system versus exercise science terminology; only general human science shared
-332,3,Same anatomy for exercise topic; major body systems versus joint complexes in movement
-333,2,Both marketing theory; persuasion theories versus applying concepts to scenarios
-334,3,Same cell structure topic; molecular structure versus functions and interactions
-335,3,Same market research topic; designing research versus interpreting and reporting results
-336,3,Same data and technology in marketing topic; strategy versus sustainability
-337,0,Accounting regulation versus data analysis software; unrelated
-338,1,Musculoskeletal clinical analysis versus behaviour change theory; only health shared
-339,2,Both health and disease science; immune and genetic factors versus alimentary health
-340,1,Database tools versus astrophysics computing; only computing tools shared
-341,2,Both accounting information; technical processing versus information systems
-342,3,Same exercise physiology topic; system interactions versus cell functions
-343,0,Astrophysics computation versus marketing problem solving; unrelated
-344,1,Workshop problem solving versus testing conjectures; only problem solving shared
-345,0,Map-reduce versus motivational interviewing; unrelated
-346,3,Same big data topic; explaining concepts versus applying high-dimensional techniques
-347,1,Neurological pathology versus surface anatomy; only health science shared
-348,0,3D modelling versus clinical anatomy; unrelated
-349,2,Both health communication; pharmacology concepts versus anatomical terms with clients
-350,2,Both human body systems; alimentary physiology versus anatomy of major systems
-351,2,Both major body systems in clinical context; anatomy and imaging versus functional assessment
-352,1,Joint function versus communicating anatomical terms; only anatomy shared
-353,2,Both accounting; traditional decision making versus information system development and ethics
-354,2,Both accounting; regulatory environment versus management accounting problem solving
-355,1,Exercise science principles versus physiological measurement; only exercise science shared
-356,3,Same resistance training topic; instructing exercises versus designing programs
-357,0,Financial statement analysis versus nervous system; unrelated
-358,0,Importing 3D models versus sustainable marketing; unrelated
-359,1,Statistical software analysis versus finding literature; only research skills shared
-360,2,Both astrophysical modelling; stellar structure versus cosmological metrics
-361,4,Same skill of interpreting physiological data in exercise science; A adds mechanics
-362,2,Both astrophysics; stellar dynamics versus stellar pulsations
-363,4,Same skill of communicating exercise science data in written and oral formats
-364,3,Same empirical research project context; managing it versus programming its data work
-365,1,Research ethics versus science communication; only scholarly practice shared
-366,0,Investment decisions versus alimentary anatomy; unrelated
-367,3,Same stellar evolution topic; individual stars versus stellar populations
-368,0,Computer graphics shaders versus pathology terminology; unrelated
-369,0,3D technical art versus clinical anatomy; unrelated
-370,3,Same professional communication skill; presentations and discussions versus clinical communication
-371,0,Software engineering practice versus astronomy topics; unrelated
-372,2,Both accounting; processing information versus equity and debt treatment
-373,0,Cosmological models versus building rapport; unrelated
-374,2,Both interpret accounting information; basic financial processing versus management accounting
-375,2,Both accounting; processing information versus management accounting issues
-376,1,Marketing concepts versus management accounting techniques; only business in common
-377,0,Astronomy computation versus disease mechanisms; unrelated
-378,2,Both analyse consumers and markets; consumer behaviour theory versus market research reporting
-379,1,Nervous system drug actions versus physiological measurement; only health science shared
-380,1,Sustainability reporting versus data privacy regulation; only business compliance shared
-381,2,Both involve genetics; multifactorial disease versus genetic stability mechanisms
-382,0,SQL programming versus calculus; unrelated
-383,0,Statistical inference versus anatomy; unrelated
-384,2,Both include active engagement in learning; A adds academic ethics
-385,0,Statistical model testing versus marketing communications terms; unrelated
-386,0,Big data concepts versus pharmacology; unrelated
-387,3,Same strength and conditioning topic; anatomical basis versus contraindications
-388,0,Data storage techniques versus study skills; unrelated
-389,2,Both astronomy; team problem solving versus cosmological metrics
-390,0,Drug safety versus finding literature; unrelated
-391,0,Mathematical models versus anatomy; unrelated
-392,2,Both marketing; applying concepts versus designing market research
-393,0,Astrophysics codes versus management accounting; unrelated
-394,0,Cyber hygiene versus data analysis software; unrelated
-395,2,Both astronomy; instrumentation knowledge versus communicating research results
-396,3,Same molecular biology topic; examining processes versus applying genetic knowledge
-397,0,Data storage versus algebra and calculus; unrelated
-398,1,Exercise science terminology versus physiological measurement; only exercise science shared
-399,3,Same accounting information systems topic; their role versus development and ethics
-400,3,Same exercise science knowledge; key terminology versus communicating it
-401,3,Same big data topic; storing large volumes versus handling high-dimensional data
-402,0,Financial reporting regulation versus cell signalling; unrelated
-403,0,Digital marketing value versus data analysis software; unrelated
-404,0,Game production versus algebra and calculus; unrelated
-405,0,Accounting profession versus brain structures; unrelated
-406,1,Project plan versus software design models; only software project artefacts shared
-407,1,Big data concepts versus customer data types; only data in common
-408,0,Infection control epidemiology versus resistance training instruction; unrelated
-409,3,Same game design topic; communicating decisions versus producing a game
-410,4,Same skill of building databases; design methods versus database tools
-411,3,Same skill of collaborative problem solving in class; astronomy topics versus workshop problems
-412,1,Astronomical statistics in python versus foundation mathematical models; only quantitative work shared
-413,2,Both accounting; basic technical processing versus equity and debt treatment
-414,2,Both astrophysics; cosmological principles versus numerical codes
-415,2,Both about ethics; research conduct versus business ethics in accounting
-416,0,Business risk controls versus cell structure; unrelated
-417,3,Same skill of written and oral communication; general argument versus astronomy research results
-418,0,Software engineering practice versus cyber security law; unrelated
-419,2,Both accounting; professional environment versus processing information
-420,2,Both physiology; alimentary processes versus system interactions in exercise
-421,0,Communicating physics versus customer value tools; unrelated
-422,2,Both physics of astrophysical environments; radiative transfer versus gas dynamics
-423,3,Same accounting profession environment topic; business versus regulatory environment
-424,0,Database applications versus persuasion theory; unrelated
-425,2,Both extragalactic astrophysics; galaxy morphology versus cosmological models
-426,0,Game design versus intercultural teamwork; unrelated
-427,0,Evaluating analysis outcomes versus exercise programming rationale; unrelated
-428,0,SQL programming versus referencing; unrelated
-429,2,Both anatomy for exercise; strength training principles versus surface identification
-430,0,Cosmological models versus financial reporting standards; unrelated
-431,0,Data storage versus marketing concepts; unrelated
-432,0,Camera and lighting design versus algebra and calculus; unrelated
-433,3,Same marketing tools for customer insight; creating value versus generating actionable insights
-434,0,Game design theory versus galaxy formation theory; unrelated
-435,0,Persuasion theory versus drug safety; unrelated
-436,2,Both accounting; processing information versus regulatory environment
-437,0,Software development tools versus market research; unrelated
-438,0,Astronomical observation versus cell physiology; unrelated
-439,4,Same movement analysis skill for joints; joint complexes versus muscle roles
-440,1,Training contraindications versus lifestyle change barriers; only health and exercise shared
-441,3,Same skill of communicating biomedical science with reflection; pharmacology versus alimentary health
-442,0,Nervous system versus referencing; unrelated
-443,1,Algorithm development versus game prototyping; only computing in common
-444,1,Exercise science terminology versus research design appraisal; only exercise science shared
-445,0,Consumer behaviour versus professional communication; unrelated
-446,4,Same skill of producing a simple game; design principles versus engine prototyping
-447,3,Same galaxy formation topic; general theories versus the Milky Way
-448,3,Same database topic; underlying concepts versus developing applications
-449,2,Both body systems; functional assessment versus system interactions in exercise
-450,0,Accounting processing versus clinical scenarios; unrelated
-451,4,Same skill of distinguishing business organisations in Australian law; corporate versus contract focus
-452,1,Research design appraisal versus muscle movement analysis; only exercise science shared
-453,1,3D technical art versus information security concepts; only computing in common
-454,0,Accounting decision making versus anatomy; unrelated
-455,1,Pharmacology versus human movement mechanics; only human body science shared
-456,0,Big data concepts versus exercise science terminology; unrelated
-457,2,Both concern learning engagement; A adds academic ethics
-458,2,Both physiology; alimentary processes versus cell functions in exercise
-459,3,Same anatomy of major body systems; clinical disorders versus exercise relevance
-460,1,Algorithm development versus machine learning; only computing in common
-461,3,Same galaxy formation topic; observed morphology versus simulation techniques
-462,1,Disease mechanisms versus behaviour change strategies; only health shared
-463,3,Same corporate finance topic including working capital; statement analysis versus investment decisions
-464,1,Developing algorithms versus workshop problem solving; only problem solving shared
-465,0,Astronomy computation versus professional communication; unrelated
-466,3,Same human cell function topic; structural features versus exercise context
-467,0,Oral presentations versus clinical musculoskeletal presentations; different meanings
-468,2,Both accounting; business ethics versus management accounting problem solving
-469,0,Cyber security law versus anatomical terminology; unrelated
-470,3,Same topic of understanding customers; data types collected versus tools for value
-471,3,Same skill of computational data analysis; statistics on astronomy data versus machine learning
-472,1,Alimentary physiology versus exercise data analysis; only physiology shared
-473,1,Astronomical experiments versus exercise data analysis; only data analysis shared
-474,3,Same learning skills topic; general engagement versus discipline-specific techniques
-475,0,Building rapport versus financial statement analysis; unrelated
-476,3,Same skill of applying and communicating biomedical science; clinical versus biochemical
-477,2,Both professional business communication; marketing plan versus accounting recommendations
-478,4,Same skill of analysing data with software packages; B includes qualitative data
-479,0,Academic ethics versus communicating mathematics; unrelated
-480,1,Exercise programming rationale versus lifestyle change barriers; only health and exercise shared
-481,2,Both data analysis techniques; high-dimensional big data versus astronomy research
-482,2,Both 3D game graphics; importing models versus explaining technical art
-483,1,Communicating clinical anatomy versus functional anatomy for training; only anatomy shared
-484,2,Both statistical data work; analysis in python versus preparing data sets
-485,0,Database concepts versus marketing communications terms; unrelated
-486,3,Same molecular cell biology topic; cell structure versus replication and expression processes
-487,3,Same big data topic; explaining concepts versus applying map-reduce
-488,1,Statistical software analysis versus implementing programs; only computing shared
-489,0,Algorithm development versus neurological pathology; unrelated
-490,3,Same consumer behaviour topic; identifying influences versus applying theory to solutions
-491,2,Both disease prevention and causes; biological factors versus lifestyle barriers
-492,0,Information security concepts versus pharmacology communication; only wording shared
-493,2,Both data science; big data concepts versus exploratory visualisation
-494,0,Company law versus exercise science research design; unrelated
-495,2,Both stellar astrophysics; stellar structure models versus pulsations
-496,2,Both body systems; physiology at rest versus anatomical structures
-497,0,Bayesian inference versus musculoskeletal anatomy; unrelated
-498,2,Both major body systems; functional assessment versus anatomical structures
-499,3,Same marketing research and analytics tools; evaluating them versus generating insights
-500,1,Management accounting versus commercial law; only business in common
+1,0,Unrelated topics with nothing meaningful in common
+2,4,Same general skill and similar inference methods
+3,0,Unrelated topics with nothing meaningful in common
+4,3,Both cover game design principles but one is analysis and one is production
+5,2,Both involve game design but one focuses on theory and the other on practical prototyping
+6,0,Unrelated topics with nothing meaningful in common
+7,2,Both involve science skills but different overall goals
+8,3,Both cover cybersecurity but one is technical and the other focuses on business governance
+9,0,Unrelated topics with nothing meaningful in common
+10,1,Both cover professional soft skills but focus on entirely different areas
+11,0,Unrelated topics with nothing meaningful in common
+12,0,Unrelated topics with nothing meaningful in common
+13,2,Both cover human physiology but focus on entirely different bodily systems
+14,0,Unrelated topics with nothing meaningful in common
+15,3,Both focus on marketing communications but one is problem solving and one is planning
+16,3,Both involve understanding health and disease mechanisms with slight differences in application
+17,0,Unrelated topics with nothing meaningful in common
+18,0,Unrelated topics with nothing meaningful in common
+19,0,Unrelated topics with nothing meaningful in common
+20,0,Unrelated topics with nothing meaningful in common
+21,3,Both involve foundational math skills but differ in application versus communication
+22,0,Unrelated topics with nothing meaningful in common
+23,2,Both relate to data management but focus on different aspects
+24,0,Unrelated topics with nothing meaningful in common
+25,3,Both cover stellar astrophysics with slightly different focuses
+26,3,Both involve communication and persuasion strategies
+27,0,Unrelated topics with nothing meaningful in common
+28,1,Both involve using software tools but in entirely different domains
+29,0,Unrelated topics with nothing meaningful in common
+30,4,Same subject where one is understanding and the other is practical application
+31,2,Both cover astrophysics but one is theoretical and the other is numerical problem solving
+32,0,Unrelated topics with nothing meaningful in common
+33,3,Both cover accounting principles with a slightly different focus
+34,2,Both involve accounting and reporting but focus on different specific topics
+35,3,Both cover cybersecurity but one is personal and one is legal
+36,2,Both cover human anatomy but focus on completely different bodily systems
+37,3,Both cover strength training but one focuses on instruction and the other on contraindications
+38,2,Both involve human bodily functions but one is pharmacology and the other is physiological rest
+39,1,Both are health sciences but cover completely different specific domains
+40,0,Unrelated topics with nothing meaningful in common
+41,2,Both relate to business compliance and management but focus on different specific tasks
+42,3,Both cover cybersecurity but one focuses on personal hygiene and the other on enterprise risk
+43,3,Both cover musculoskeletal anatomy for exercise science with slightly different focuses
+44,3,Both involve foundational mathematics applied to scientific contexts
+45,3,Both cover human physiology but one is specific to a system and the other is general
+46,0,Unrelated topics with nothing meaningful in common
+47,0,Unrelated topics with nothing meaningful in common
+48,0,Unrelated topics with nothing meaningful in common
+49,1,Both are foundational health science skills but differ greatly in specific focus
+50,0,Unrelated topics with nothing meaningful in common
+pair_id,llm_score,llm_reason
+51,0,Completely unrelated topics comparing corporate insolvency with personal professional reflection
+52,0,Totally different subjects comparing python programming to exercise science anatomy
+53,3,Both focus on statistical inference but differ in general principles versus specific Bayesian methods
+54,3,Both involve analysing marketing issues but one focuses on communication problems while the other uses technology tools
+55,1,Only weakly connected through the general skill of explaining or communicating information
+56,0,Completely unrelated comparing business risk analysis with clinical anatomical communication skills
+57,0,Unrelated comparing communication of physics concepts with mathematical reasoning and calculus
+58,0,Completely unrelated comparing marketing customer value to medical pathology terminology
+59,0,Unrelated comparing 3D game engine modelling with sustainable business reporting practices
+60,0,Completely different fields comparing corporate finance with medical health communication
+61,0,Unrelated comparing algorithmic or method efficiency analysis with creating a project plan
+62,4,Both cover genetic mechanisms at the cellular level with slight differences in specific focus areas
+63,0,Unrelated comparing business cybersecurity risk management with interpersonal rapport strategies
+64,0,Completely unrelated comparing astrophysics theories with marketing research principles
+65,0,Unrelated subjects comparing astronomical instrumentation with testing mathematical conjectures
+66,2,Both focus on pharmacological concepts but target entirely different skills of clinical application versus professional communication
+67,2,Both involve data analysis techniques but differ significantly in specific domain and programming application
+68,0,Completely unrelated comparing cosmological models with cellular genetic mechanisms
+69,2,Both deal with foundational mathematics in science but focus on different skills of calculation versus communication
+70,0,Unrelated comparing 3D scene technical art with physiological data measurement
+71,2,Both relate to human physiology but cover distinct topics of nervous system organization versus exercise data interpretation
+72,0,Unrelated comparing astrophysics stellar structure with marketing technology insights
+73,0,Unrelated comparing laboratory Python programming with testing mathematical conjectures
+74,3,Both address the broader context of the accounting profession but focus on different aspects like ethics versus environment
+75,0,Completely unrelated comparing 3D model transformation with corporate accounting treatments
+76,0,Unrelated comparing software engineering practices with market research design
+77,0,Unrelated comparing 3D animation importing with evaluating marketing research principles
+78,0,Unrelated comparing game engine prototyping with cybersecurity privacy evaluation
+79,0,Unrelated comparing software engineering practices with foundational active learning skills
+80,0,Unrelated comparing cybersecurity law frameworks with marketing communication concepts
+81,0,Unrelated comparing stellar pulsation theories with active problem solving in workshops
+82,2,Both are astrophysics topics but focus on entirely different areas of observational methods versus theoretical stellar equations
+83,0,Unrelated comparing stellar evolution physics with the communication of foundational mathematical concepts
+84,0,Unrelated comparing customer marketing tools with Australian legal system features
+85,0,Unrelated comparing SQL database programming with general project planning
+86,0,Unrelated comparing corporate shareholder rights with nervous system organization
+87,0,Unrelated comparing stellar pulsations with marketing communications concepts
+88,2,Both cover exercise science but address different skills of understanding principles versus communicating knowledge
+89,0,Completely unrelated comparing observational astronomy with professional accounting communication
+90,0,Unrelated comparing observational astronomy methods with consumer behaviour theory
+91,0,Unrelated comparing astrophysical radiative transfer with management accounting issues
+92,2,Both involve computer science skills but focus on different areas of database building versus algorithm development
+93,1,Very loosely connected through the health field but comparing biomechanical movement analysis with behaviour change models
+94,1,Both relate to business analysis but focus on entirely different areas of market research versus management accounting
+95,3,Both deal with accounting applications but differ in focus between internal management solutions and external financial reporting
+96,0,Unrelated comparing galaxy formation theories with health behaviour change models
+97,0,Unrelated comparing software engineering culture with managerial accounting in Excel
+98,3,Both involve academic research skills but focus on finding literature versus formatting references correctly
+99,2,Both relate to exercise science but focus on applied training design versus foundational human anatomy knowledge
+100,2,Both focus on modelling astrophysical environments but differ in specific techniques of radiative transfer versus Python computation
+pair_id,llm_score,llm_reason
+101,4,Both cover the use of technology and data to improve marketing practices and strategies
+102,0,Completely unrelated topics covering big data and astronomical problem solving
+103,0,Completely unrelated topics covering statistical computing and mathematical communication
+104,1,Both relate to the business environment but focus on completely different specific disciplines
+105,2,Both involve statistical analysis but apply to entirely different domains and tools
+106,3,Both focus on stellar astronomy but require different skills of explaining versus experimenting
+107,3,Both involve 3D game asset development but focus on different technical stages
+108,0,Unrelated topics comparing databases and game design theories
+109,1,Both are computing topics but cover entirely different domains of programming and cybersecurity
+110,1,Both are business topics but cover completely different areas of marketing and corporate law
+111,2,Both cover human physiology but focus on cellular biology versus exercise response
+112,3,Both focus on the nervous system but approach it from anatomy versus pharmacology
+113,0,Unrelated topics covering programming and foundational learning skills
+114,0,Unrelated topics covering marketing data and exercise science literature
+115,0,Unrelated skills comparing academic management and clinical communication
+116,0,Unrelated topics covering Bayesian inference and health behaviour change
+117,3,Both cover corporate law but focus on different phases of a company lifecycle
+118,0,Unrelated topics covering databases and elementary mathematics
+119,0,Unrelated topics comparing astronomical observation and exercise physiology
+120,3,Both cover cybersecurity but one is technical and the other is sociological
+121,3,Both cover advanced astrophysics focusing on large scale cosmic evolution and modelling
+122,0,Unrelated topics covering game design and biomechanics
+123,1,Very loosely related as STEM skills but cover entirely different disciplines
+124,0,Unrelated topics comparing personal learning skills and corporate sustainability reporting
+125,1,Loosely related biomedical topics but entirely different subfields of pharmacology and anatomy
+126,0,Unrelated topics covering academic ethics and stellar populations
+127,0,Unrelated topics comparing mathematical modelling and clinical learning techniques
+128,3,Both cover management accounting but differ by focusing on software tools versus general concepts
+129,2,Both cover practical accounting tasks but focus on different specific processes and applications
+130,2,Both relate to astrophysics but focus on theoretical explanation versus computational modelling
+131,0,Unrelated topics covering software engineering and human physiology
+132,0,Unrelated topics covering programming and academic ethics
+133,2,Both cover accounting but one focuses on governance theory and the other on processing software
+134,0,Unrelated business topics covering marketing and accounting regulations
+135,0,Unrelated topics covering astronomical coding and cellular physiology
+136,0,Unrelated topics covering statistical model comparison and clinical health concepts
+137,2,Both cover corporate finance but focus on investment viability versus regulatory reporting
+138,0,Unrelated business topics covering marketing research and accounting regulations
+139,1,Loosely related IT topics covering big data and personal cyber hygiene
+140,0,Unrelated topics covering research ethics and digital marketing
+141,0,Unrelated topics covering game prototyping and personal self reflection
+142,3,Both cover astrophysics but focus on different specific phenomena of radiation and dynamics
+143,0,Unrelated topics covering market research and neuropharmacology
+144,3,Both cover financial accounting standards and treatments for corporate reporting
+145,3,Both cover corporate law regarding business organisations and company structures
+146,2,Both involve corporate governance but focus on general risk versus specific insolvency mechanisms
+147,1,Loosely related corporate business topics covering legal obligations and financial viability
+148,3,Both cover cybersecurity but contrast technical concepts with personal cyber hygiene practices
+149,3,Both cover personal academic and professional development strategies
+150,3,Both cover advanced astronomy but focus on theoretical equations versus general analysis techniques
+pair_id,llm_score,llm_reason
+151,1,Both cover biological and health sciences but completely different specific topics and skills
+152,0,Unrelated topics covering astrophysics and biomechanics
+153,0,Unrelated topics covering cosmology and cellular physiology
+154,3,Both cover managerial accounting and budgeting but differ by focusing on software tools versus general concepts
+155,1,Loosely related as both involve models but in entirely different domains of software and science
+156,2,Both involve accounting contexts but focus on different areas of management and information systems
+157,0,Unrelated topics covering statistics and managerial accounting
+158,0,Unrelated computing topics covering databases and game design
+159,4,Both cover communicating mathematical concepts for foundation science with minor differences in modeling versus general forms
+160,0,Unrelated topics covering big data and exercise science
+161,3,Both cover human anatomy but focus on different systems and levels of specificity
+162,0,Unrelated topics covering astrophysics and marketing research
+163,3,Both cover human biology for exercise science but focus on macro anatomy versus micro physiology
+164,2,Both focus on professional communication but one is specific to accounting and the other is general
+165,0,Unrelated topics covering software design and marketing
+166,3,Both cover clinical health communication but focus on general disease mechanisms versus specific pharmacology
+167,0,Unrelated topics covering game design and consumer behavior
+168,3,Both cover marketing frameworks but focus on general application versus specific identification
+169,2,Both focus on communicating scientific research but in entirely different disciplines of astronomy and health
+170,3,Both cover marketing scenarios but focus on applying concepts versus communicating solutions
+171,0,Unrelated topics covering astronomy and human anatomy
+172,2,Both cover health sciences but focus on anatomical identification versus physiological data analysis
+173,3,Both cover musculoskeletal anatomy but apply different skills of clinical analysis versus surface identification
+174,1,Unrelated topics comparing statistical data modeling and health behavior models
+175,4,Both cover the use of accounting concepts for business decision making and operational assessment
+176,0,Unrelated topics covering astrophysics and clinical health
+177,3,Both cover marketing tools for customer research but differ in practical application versus theoretical evaluation
+178,2,Both involve computational problem solving but apply different methods to different domains
+179,0,Unrelated topics covering marketing and exercise science
+180,3,Both cover human physiology in exercise contexts but differ in scale from systems to cells
+181,3,Both cover statistical inference but focus on fundamental knowledge versus specific likelihood methods
+182,2,Both focus on communicating scientific data but in entirely different disciplines
+183,3,Both cover game design but focus on theoretical disciplinary knowledge versus practical application
+184,0,Unrelated topics covering marketing technology and corporate finance
+185,3,Both cover human body systems in exercise but focus on physiological interaction versus anatomical structure
+186,0,Unrelated topics covering programming and marketing
+187,2,Both involve software engineering but focus on different specific areas of databases and design
+188,0,Unrelated topics covering astronomy and exercise science
+189,0,Unrelated topics covering databases and health behavior
+190,0,Unrelated topics covering software design and accounting
+191,4,Both cover communicating health and disease concepts with one being a specific alimentary subset
+192,1,Loosely related health science topics covering drug discovery and alimentary health communication
+193,3,Both cover programming but one is general implementation while the other applies Python to astronomy
+194,0,Unrelated topics covering cybersecurity and exercise science
+195,0,Unrelated topics covering astronomy and human physiology
+196,5,Equivalent outcomes focusing on applying standard software engineering practices like documentation and testing
+197,0,Unrelated topics covering marketing and anatomy
+198,1,Loosely related topics involving legal and regulatory frameworks in completely different domains
+199,0,Unrelated topics covering computer graphics and astronomical instrumentation
+200,3,Both cover accounting in business but focus on management versus information systems
+pair_id,llm_score,llm_reason
+201,3,Both cover 3D models for games but apply different skills of creation versus engine integration
+202,0,Unrelated topics covering research data applications and game design communication
+203,2,Both cover data in exercise science but focus on measurement versus communication
+204,0,Unrelated business topics covering marketing and management accounting
+205,3,Both cover marketing communications but differ in identifying concepts versus developing and communicating a full plan
+206,1,Loosely related corporate topics covering general management and accounting information systems
+207,1,Both involve models but one focuses on abstract software design and the other on 3D geometry
+208,0,Unrelated topics covering business law and the nervous system
+209,0,Unrelated topics covering consumer behavior and cellular physiology
+210,3,Both cover programming algorithms but focus on problem solving versus implementation and control flow
+211,3,Both cover astrophysics but differ in scope from discussing specific topics to undertaking broad research
+212,0,Unrelated topics covering machine learning and exercise science research
+213,1,Both are IT topics but cover different areas of big data and privacy regulations
+214,1,Loosely related health topics covering pharmacology and health behavior change models
+215,2,Both involve teamwork and culture but in different contexts of software engineering and general diverse backgrounds
+216,2,Both cover physiological data in exercise science but focus on data analysis versus system interaction
+217,2,Both involve communicating research results but in entirely different disciplines of astronomy and marketing
+218,5,Equivalent ULOs focusing on applying problem solving skills to develop algorithms
+219,0,Unrelated topics covering project planning and biomechanics
+220,1,Loosely related scientific skills focusing on general problem solving versus using numerical codes
+221,0,Unrelated topics covering astronomical analysis and marketing research
+222,3,Both cover stellar astronomy but focus on structural properties versus chemical synthesis
+223,0,Unrelated topics covering big data and astrophysics
+224,4,Both cover human physiological systems but differ slightly in context of rest versus exercise
+225,0,Unrelated topics covering statistical inference and galaxy morphology
+226,3,Both cover the human body in exercise science but focus on mechanical data versus anatomical structures
+227,5,Equivalent outcomes identifying and explaining fundamental principles and concepts of exercise and sports science
+228,5,Identical outcomes demonstrating foundational learning skills and active engagement
+229,0,Unrelated topics covering algorithmic problem solving and persuasive communication
+230,0,Unrelated topics covering persuasive communications and resistance training
+231,2,Both cover astronomy but focus on instrumentation knowledge versus team problem solving discussions
+232,1,Both are business topics but cover different areas of marketing research and accounting systems
+233,0,Unrelated topics covering cellular physiology and exercise science research methods
+234,3,Both cover human physiology in exercise but focus on system interaction versus data measurement
+235,0,Unrelated topics covering astronomy and cellular biology
+236,3,Both cover digital marketing data and value but focus on data collection methods versus assessing value creation
+237,1,Loosely related software engineering topics covering design models and game design communication
+238,0,Unrelated topics covering software engineering tools and management accounting
+239,2,Both involve scientific research but differ in scope of general project management versus specific astronomical analysis
+240,0,Unrelated topics covering disease mechanisms and quantitative data analysis
+241,3,Both relate to accounting and business processes but focus on traditional aspects versus information systems
+242,0,Unrelated topics covering astronomical experiments and pharmacology
+243,4,Both focus on health behavior change but cover theoretical models versus evaluating strategies and exercise adherence
+244,4,Both focus on utilizing anatomical terminology but differ slightly in defining terms versus communicating with stakeholders
+245,4,Both apply anatomical knowledge but differ in application to strength conditioning versus clinical presentations
+246,2,Both cover corporate management but focus on accounting information versus legal functionality and obligations
+247,0,Unrelated topics covering academic ethics and clinical health communication
+248,0,Unrelated topics covering basic learning skills and medical terminology
+249,2,Both involve planning but cover general project plans versus specific marketing communications
+250,0,Unrelated topics covering consumer behavior and anatomical communication
+pair_id,llm_score,llm_reason
+251,3,Both cover cellular biology but focus on describing structures versus applying biochemical and genetic knowledge
+252,0,Unrelated topics covering digital marketing data and persuasive communications theory
+253,3,Both cover clinical health science but focus on medical terminology versus alimentary system physiology
+254,1,Loosely related as research and models but applied to entirely different fields of marketing and health behavior
+255,2,Both cover astronomical research skills but focus on instrumentation versus broad topic research
+256,4,Both cover astrophysics specifically concerning galaxy structure and formation history
+257,0,Unrelated academic skills covering scientific analysis evaluation and reference style competency
+258,2,Both cover human biology for exercise science but focus on physiological systems versus musculoskeletal surface anatomy
+259,0,Unrelated topics covering SQL programming and pharmacological communication
+260,0,Unrelated topics covering game design and biochemical processes
+261,2,Both cover academic learning skills but focus on ethics versus foundational engagement
+262,0,Unrelated topics covering design models and financial statements
+263,0,Unrelated topics covering computational efficiency and clinical imaging
+264,1,Both are corporate business topics but completely different areas of management accounting and corporate law
+265,0,Unrelated topics covering statistical inference and exercise science principles
+266,0,Unrelated topics covering research document preparation and health behavior models
+267,3,Both cover exercise science but differ in scope from general principles to specific contraindications for training
+268,2,Both cover game design but focus on theoretical knowledge versus communicating decisions
+269,0,Unrelated topics covering astrophysical gas flows and academic referencing
+270,4,Both cover corporate law specifically concerning management issues and the obligations of directors
+271,0,Unrelated topics covering stellar dynamics and human physiology
+272,0,Unrelated topics covering computer programming concepts and marketing fundamentals
+273,4,Both cover human anatomical systems relevant to exercise and functional movement
+274,3,Both cover marketing but focus on research techniques versus sustainable technology evaluation
+275,1,Loosely related reflective/evaluative skills applied to entirely different domains
+276,2,Both involve communicating research results in written form but in entirely different disciplines
+277,3,Both cover marketing technology and data but focus on generating insights versus sustainable practices
+278,3,Both cover marketing communications but focus on evaluating persuasive theories versus developing a full plan
+279,1,Both are corporate business topics but completely different areas of accounting systems and corporate law
+280,3,Both cover professional communication skills but one is general and the other is specific to clinical anatomy
+281,0,Unrelated topics covering astronomical problem solving and pharmacological safety
+282,3,Both cover astronomy research but focus on fundamental analysis techniques versus complex computational problems
+283,0,Unrelated topics covering empirical research management and exercise science terminology
+284,4,Both cover specific processes of stellar evolution including mass loss and death
+285,0,Unrelated topics covering empirical research and Australian corporate law
+286,3,Both cover modern astrophysics but focus on describing key topics versus applying fundamental analysis techniques
+287,1,Both are business topics but completely different areas of customer value and risk control
+288,0,Unrelated topics covering computer programming and functional anatomy
+289,3,Both cover project planning and management with one specifying empirical research
+290,0,Unrelated topics covering corporate insolvency and clinical anatomy
+291,1,Loosely related data analysis skills applied to entirely different fields of astronomy and exercise science
+292,0,Unrelated topics covering managerial accounting and professional communication
+293,4,Both cover models and processes of stellar evolution
+294,2,Both cover health science communication but focus on anatomical terminology versus behavior change models
+295,1,Loosely related to data and information sharing but entirely different domains and skills
+296,0,Unrelated topics covering mathematical communication and exercise science terminology
+297,4,Both cover fundamental marketing concepts and frameworks
+298,3,Both cover human physiological systems relevant to exercise science
+299,0,Unrelated topics covering astrophysics research and resistance training
+300,0,Unrelated topics covering marketing concepts and exercise science terminology
+pair_id,llm_score,llm_reason
+301,0,Unrelated topics covering marketing technology and exercise science contraindications
+302,0,Unrelated topics covering methods efficiency and marketing communications
+303,0,Unrelated topics covering mathematical calculus and reference style competency
+304,1,Both involve handling data sets but applied to entirely different domains of marketing and statistics
+305,0,Unrelated topics covering research management and pharmacological communication
+306,4,Both cover specific computing techniques for processing and handling large-scale big data
+307,1,Both cover business finance topics but focus on ethics versus investment viability
+308,3,Both cover human physiological systems but focus on interaction versus data measurement
+309,4,Both cover identifying surface anatomy landmarks of musculoskeletal and vascular systems for exercise science
+310,3,Both cover understanding customers but focus on utilizing data versus using a variety of tools
+311,0,Unrelated topics covering software engineering practices and biomechanics
+312,2,Both cover reflective professional practice but in general development versus pharmacological communication
+313,2,Both cover accounting for business problem solving but focus on traditional aspects versus management concepts
+314,3,Both cover foundational knowledge in exercise science but focus on terminology versus functional anatomy
+315,3,Both cover preparing financial statements and accounting issues but focus on routine advice versus specific standards
+316,1,Loosely related computer science topics covering graphics rendering and laboratory problem solving
+317,0,Unrelated topics covering astrophysics and resistance training
+318,4,Both cover the regulatory and theoretical environment for the accounting profession
+319,1,Loosely related modeling skills applied to entirely different domains of software and foundation science
+320,3,Both cover corporate law specifically concerning insolvency regulation and management issues
+321,0,Unrelated business topics covering accounting information systems and professional communication
+322,0,Unrelated academic skills covering literature search and data analysis software
+323,2,Both cover foundational exercise science but focus on principles versus research design
+324,0,Unrelated topics covering game design and astrophysics
+325,0,Unrelated topics covering astronomical observation and mathematical modeling
+326,2,Both cover accounting systems but focus on processing software versus evaluating system benefits
+327,0,Unrelated topics covering astronomical observation and accounting information systems
+328,0,Unrelated topics covering statistical estimation and managerial accounting
+329,0,Unrelated topics covering astronomy and cellular biology
+330,4,Both cover applying consumer behavior theory to real-world experiences and solutions
+331,1,Loosely related health science topics covering the nervous system and general exercise terminology
+332,3,Both cover anatomical structures for exercise science but focus on general systems versus specific joint complexes
+333,2,Both cover marketing theories but focus on persuasive communications versus general application
+334,4,Both cover the structural features of human biological cells and their functions
+335,4,Both cover conducting and interpreting market research to communicate results and recommendations
+336,4,Both cover evaluating the role of technology and data in marketing practices
+337,0,Unrelated topics covering accounting regulation and data analysis software
+338,1,Loosely related clinical applications covering musculoskeletal anatomy and health behavior change
+339,3,Both cover clinical health science focusing on disease mechanisms versus alimentary health communication
+340,1,Both involve computing tools but apply to completely different domains of databases and astrophysics
+341,2,Both cover practical accounting skills but focus on basic information processing versus evaluating information systems
+342,3,Both cover human physiology in exercise but differ in scale from systems to cells
+343,0,Unrelated topics covering computational astrophysics and marketing communications
+344,2,Both cover mathematical problem solving skills but focus on real-time demonstration versus testing conjectures
+345,0,Unrelated topics covering big data techniques and motivational interviewing
+346,3,Both cover big data but focus on conceptual explanation versus handling high-dimensional techniques
+347,1,Loosely related clinical applications covering neural pathology and surface anatomy
+348,0,Unrelated topics covering 3D modeling and clinical anatomy
+349,2,Both cover professional clinical communication but in different domains of pharmacology and anatomy
+350,3,Both cover physiological systems but focus on the alimentary system versus major anatomical structures
+pair_id,llm_score,llm_reason
+351,3,Both cover human body systems but focus on clinically-relevant anatomical changes versus functional assessment components
+352,1,Loosely related health science topics covering skeletal joint complexes and anatomical communication
+353,1,Both cover accounting but completely different topics of business decision making and information systems
+354,1,Both cover accounting but focus on the regulatory environment versus applied management concepts
+355,2,Both cover foundational exercise science but focus on general principles versus physiological data measurement
+356,3,Both cover resistance training but focus on safely instructing exercises versus designing tailored programs
+357,0,Unrelated topics covering financial statements and nervous system anatomy
+358,0,Unrelated topics covering 3D game models and sustainable marketing technology
+359,0,Unrelated topics covering statistical computing packages and scientific literature access
+360,3,Both cover advanced astrophysics but focus on different phenomena of stellar structure versus cosmological models
+361,4,Both cover basic physiological data relevant to exercise science with one also including mechanical data
+362,3,Both cover astrophysics specifically concerning stars and galaxies but focus on different phenomena
+363,4,Both cover interpreting and communicating data in exercise and sports science using various formats
+364,2,Both involve empirical research but differ in scope from general project management to programming applications
+365,0,Unrelated academic skills covering research ethics and exercise science communication
+366,0,Unrelated topics covering corporate finance and alimentary anatomy
+367,3,Both cover stellar astronomy but focus on the physics of stellar evolution versus properties of stellar populations
+368,0,Unrelated topics covering computer graphics and medical terminology
+369,0,Unrelated topics covering 3D technical art and clinical anatomy
+370,4,Both focus on effective interpersonal communication skills with one being a more general version of the other
+371,0,Unrelated topics covering software engineering practices and modern astrophysics
+372,2,Both cover accounting treatments but focus on basic processing software versus corporate equity and debt financing
+373,0,Unrelated topics covering cosmological modeling and interpersonal communication strategies
+374,2,Both cover technical accounting skills but focus on basic information processing versus management accounting issues
+375,2,Both cover accounting but focus on processing software versus management issues
+376,0,Unrelated business topics covering marketing concepts and managerial accounting
+377,0,Unrelated topics covering computational astronomy and clinical health mechanisms
+378,2,Both involve marketing theories but focus on consumer behavior versus market research analysis and communication
+379,1,Loosely related health science data covering pharmacology and exercise physiology
+380,1,Loosely related business topics covering sustainable reporting guidelines and data privacy regulations
+381,2,Both cover cellular mechanisms of disease but focus on multifactorial health aspects versus genetic stability
+382,0,Unrelated topics covering database programming and mathematical calculus
+383,0,Unrelated topics covering statistical inference and anatomical structures
+384,3,Both cover academic learning skills and active engagement with one specifying ethical issues
+385,0,Unrelated topics covering theoretical data models and marketing communications
+386,0,Unrelated topics covering big data concepts and pharmacological concepts
+387,3,Both cover foundational knowledge in exercise science specifically related to strength and conditioning training
+388,0,Unrelated topics covering data storage and academic learning techniques
+389,3,Both involve astronomy topics but differ in focus on problem solving versus cosmological models
+390,0,Unrelated skills in pharmacology safety and literature research
+391,0,Unrelated topics covering mathematical modeling and anatomical structures
+392,3,Both involve real-world market applications but focus on applying general concepts versus designing specific research
+393,0,Unrelated topics covering computational astrophysics and management accounting
+394,0,Unrelated topics covering personal cyber security and qualitative/quantitative data analysis
+395,2,Both cover astronomical research but focus on instrumentation versus communicating results
+396,3,Both cover cellular and biochemical biology but focus on specific molecular processes versus general applications
+397,0,Unrelated topics covering data storage and mathematical reasoning
+398,2,Both cover exercise and sports science foundational knowledge but focus on terminology versus physiological data measurement
+399,4,Both cover information systems in business with a focus on evaluating roles methodologies and ethical decision making
+400,2,Both cover exercise and sports science knowledge but focus on foundational terminology versus communication skills
+pair_id,llm_score,llm_reason
+401,3,Both cover big data techniques but focus on storing large volumes versus handling high-dimensional data
+402,0,Unrelated topics covering financial reporting regulation and cellular biology
+403,0,Unrelated topics covering digital marketing value and quantitative data analysis software
+404,0,Unrelated topics covering game production and mathematical reasoning
+405,0,Unrelated topics covering accounting business environment and nervous system anatomy
+406,1,Loosely related project skills covering general plans versus software design models
+407,0,Unrelated topics covering big data concepts and customer data collection
+408,0,Unrelated health topics covering microbiology/epidemiology and resistance training instruction
+409,2,Both cover game design but focus on communicating decisions versus applying principles to production
+410,3,Both cover database applications but focus on design methods versus using industrial-strength tools
+411,2,Both involve problem solving but in different contexts of astronomy discussions versus general workshop demonstration
+412,0,Unrelated topics covering Python data analysis for astronomy and mathematical modeling for foundation science
+413,2,Both cover accounting practice but focus on general basic processing versus specific equity/debt treatments
+414,2,Both cover astrophysics but focus on qualitative cosmological models versus numerical problem solving
+415,2,Both cover academic ethics but focus on research conduct/open access versus accounting management contexts
+416,0,Unrelated topics covering business risk control and cellular biology
+417,3,Both cover written and oral communication but one is general argumentation and the other is specific to astronomy
+418,0,Unrelated IT topics covering software engineering practices and cybersecurity law
+419,2,Both cover the accounting profession but focus on its general environment versus specific processing skills
+420,3,Both cover human physiological systems but focus on the alimentary system versus interaction during exercise
+421,0,Unrelated topics covering physics communication and marketing tools
+422,3,Both cover astrophysical environments but focus on radiation interaction versus gas flow dynamics
+423,4,Both cover the broad environment of the accounting profession with a slight difference in general versus regulatory focus
+424,0,Unrelated topics covering database design and persuasive communication theories
+425,3,Both cover astrophysical theories and observations but focus on galaxy morphology versus cosmological models
+426,0,Unrelated topics covering game design and intercultural communication
+427,0,Unrelated topics covering general scientific evaluation and exercise programming rationale
+428,0,Unrelated academic skills covering SQL programming and reference styles
+429,3,Both apply functional anatomy to exercise science but focus on strength conditioning versus surface structure identification
+430,0,Unrelated topics covering cosmological models and financial accounting standards
+431,0,Unrelated topics covering data storage and marketing concepts
+432,0,Unrelated topics covering 3D visual effects and mathematical reasoning
+433,3,Both cover using tools and technology in marketing to generate insights and create customer value
+434,0,Unrelated topics covering game design theories and galaxy formation theories
+435,0,Unrelated topics covering persuasive communications and pharmacology
+436,2,Both cover accounting but focus on practical processing versus the regulatory environment
+437,0,Unrelated topics covering software engineering tools and market research
+438,0,Unrelated topics covering astronomical observation and cellular physiology
+439,4,Both cover analyzing movement in exercise science through understanding joints and muscle functions
+440,1,Loosely related health topics covering specific exercise contraindications and general lifestyle change barriers
+441,3,Both cover professional clinical communication but in different domains of pharmacology and alimentary health
+442,0,Unrelated topics covering nervous system anatomy and reference style competency
+443,1,Loosely related software topics covering algorithmic problem solving and game prototyping
+444,2,Both cover foundational exercise science but focus on terminology versus research methods
+445,1,Loosely related business/professional skills covering consumer behavior and communication
+446,4,Both cover creating simple games focusing on applying principles versus prototyping in an engine
+447,4,Both cover galaxy formation and evolution theories with one specifically focused on the Milky Way
+448,3,Both cover database management systems but focus on basic concepts versus functional design
+449,3,Both cover major body systems but focus on functional assessment versus physiological interaction in exercise
+450,0,Unrelated topics covering accounting processing and clinical health communication
+pair_id,llm_score,llm_reason
+451,5,Equivalent outcomes requiring the identification and distinguishing of business organisations within the Australian legal framework
+452,0,Unrelated topics covering research design in exercise science and biomechanical movement analysis
+453,1,Both involve computing and technical concepts but in entirely different domains of 3D art and cybersecurity
+454,0,Unrelated topics covering management accounting and human anatomy
+455,0,Unrelated topics covering pharmacology and biomechanics
+456,0,Unrelated topics covering big data concepts and exercise science terminology
+457,3,Both cover academic learning skills and engagement but focus on ethical issues versus clinical science challenges
+458,3,Both cover human physiological systems and cells but focus on the alimentary system versus general exercise context
+459,3,Both cover the anatomy of major body systems but focus on clinical system disorders versus general functional explanations
+460,2,Both involve computational problem solving but apply different methods of algorithms versus machine learning data analysis
+461,4,Both cover theories of galaxy formation and evolution with slight differences in observing morphology versus simulating theories
+462,1,Loosely related health science topics covering disease mechanisms and health behavior change strategies
+463,3,Both cover financial analysis and business problem solving but focus on working capital versus investment viability
+464,2,Both involve problem solving but in different contexts of algorithm development versus real-time workshop demonstration
+465,0,Unrelated topics covering computational astronomy and professional communication
+466,4,Both cover the structural features and physiological functions of human cells and cellular activity
+467,0,Unrelated topics covering oral communication skills and musculoskeletal anatomy analysis
+468,2,Both cover accounting contexts but focus on ethical management versus applying management accounting techniques
+469,0,Unrelated topics covering cybersecurity law and anatomical communication
+470,3,Both cover understanding customers through data and tools but focus on collection methods versus creating value
+471,3,Both apply computational data analysis techniques but focus on statistical astronomy data versus general machine learning patterns
+472,1,Loosely related exercise science physiological data covering the alimentary system and general mechanics
+473,1,Loosely related scientific data analysis applying to entirely different disciplines of astronomy and exercise science
+474,3,Both cover foundational academic learning skills but one is general and the other is specific to clinical sciences
+475,0,Unrelated topics covering interpersonal rapport strategies and financial statement analysis
+476,3,Both cover applying scientific knowledge to analyze and communicate health/biological processes
+477,2,Both involve professional communication of plans/recommendations but in entirely different domains of marketing and accounting
+478,4,Both involve analyzing data using computing software packages with minor differences in specific procedures and data types
+479,0,Unrelated topics covering academic ethics and mathematical communication
+480,1,Loosely related health science applications covering exercise rationale and lifestyle change barriers
+481,2,Both involve data analysis techniques but apply to entirely different fields of big data and astronomy
+482,3,Both cover 3D game models but apply different skills of engine integration versus identifying technical art techniques
+483,1,Loosely related applied anatomy skills focusing on professional communication versus strength and conditioning principles
+484,2,Both involve statistical data analysis but apply different specific skills of coding versus categorizing data
+485,0,Unrelated topics covering database management systems and marketing communications
+486,3,Both cover cellular biology but focus on general structural features versus specific molecular processes
+487,3,Both cover big data concepts but focus on fundamental explanation versus applying specific map-reduce techniques
+488,1,Both involve computing but cover different skills of statistical data analysis versus implementing algorithms
+489,0,Unrelated topics covering algorithmic problem solving and neural pathology evaluation
+490,4,Both cover consumer behavior theory but differ slightly in identifying influences versus developing consumption solutions
+491,2,Both cover clinical health science focusing on disease prevention but differ in biological mechanisms versus lifestyle barriers
+492,1,Both mention emerging technologies but apply to entirely different domains of cybersecurity and pharmacology communication
+493,2,Both cover data concepts but focus on explaining big data versus visualising data properties and biases
+494,0,Unrelated topics covering corporate law and exercise science research design
+495,3,Both cover advanced astrophysics specifically concerning stellar structure and evolution
+496,4,Both cover major human physiological/anatomical systems but focus on their interaction versus identifying structures
+497,0,Unrelated topics covering Bayesian inference and musculoskeletal anatomy
+498,4,Both cover understanding major body systems but focus on functional assessment versus identifying anatomical structures
+499,3,Both cover marketing research and analysis but focus on evaluating principles versus generating actionable insights
+500,0,Unrelated business topics covering management accounting and corporate law
